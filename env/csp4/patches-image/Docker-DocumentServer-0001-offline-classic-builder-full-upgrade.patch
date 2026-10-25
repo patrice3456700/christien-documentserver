@@ -1,0 +1,36 @@
+diff --git a/Dockerfile b/Dockerfile
+index 0288fd6..ee9bf54 100644
+--- a/Dockerfile
++++ b/Dockerfile
+@@ -1,4 +1,3 @@
+-# syntax=docker/dockerfile:1
+ FROM ubuntu:24.04
+ LABEL maintainer="Ascensio System SIA <support@onlyoffice.com>"
+ 
+@@ -6,7 +5,7 @@ ENV LC_ALL=en_US.UTF-8 LANGUAGE=en_US:en DEBIAN_FRONTEND=noninteractive
+ 
+ # Install base OS dependencies: locale, cron, supervisor, network tools.
+ RUN printf '#!/bin/sh\nexit 101\n' > /usr/sbin/policy-rc.d && \
+-    apt-get -y update && apt-get -yq install --no-install-recommends \
++    apt-get -y update && apt-get -y full-upgrade && apt-get -yq install --no-install-recommends \
+         $(: tools) ca-certificates curl gnupg locales sudo cron certbot python3-certbot-nginx netcat-openbsd supervisor && \
+     locale-gen ${LC_ALL} && rm -rf /var/lib/apt/lists/*
+ 
+@@ -21,15 +20,14 @@ ENV COMPANY_NAME=$COMPANY_NAME PRODUCT_NAME=$PRODUCT_NAME PRODUCT_EDITION=$PRODU
+ 
+ # Copy fonts, supervisor configs, and entrypoint scripts.
+ COPY fonts/ /usr/share/fonts/truetype/
+-COPY --exclude=ds-adminpanel.conf --exclude=ds.conf.enterprise config/supervisor/ /etc/supervisor/conf.d/
++COPY config/supervisor/ /etc/supervisor/conf.d/
+ COPY run-document-server.sh /app/ds/run-document-server.sh
+ 
+ # Download and install the document server package, verify msttcorefonts.
+ RUN PACKAGE_FILE="${COMPANY_NAME}-${PRODUCT_NAME}${PRODUCT_EDITION}${PACKAGE_VERSION:+_$PACKAGE_VERSION}_${TARGETARCH:-$(dpkg --print-architecture)}.deb" && \
+     test -z "$PRODUCT_EDITION" || { echo "ERROR: PRODUCT_EDITION is set - community package requires an empty edition suffix"; exit 1; } && \
+     curl -fsSLo /tmp/$PACKAGE_FILE "$PACKAGE_BASEURL/$PACKAGE_FILE" && \
+-    curl -fsSL https://download.onlyoffice.com/GPG-KEY-ONLYOFFICE | gpg --batch --yes --dearmor -o /usr/share/keyrings/onlyoffice.gpg && \
+-    echo "deb [signed-by=/usr/share/keyrings/onlyoffice.gpg] https://download.onlyoffice.com/repo/debian squeeze main" > /etc/apt/sources.list.d/onlyoffice.list && \
++    rm -f /etc/supervisor/conf.d/ds-adminpanel.conf /etc/supervisor/conf.d/ds.conf.enterprise && \
+     echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections && \
+     apt-get -y update && apt-get -yq install --no-install-recommends /tmp/$PACKAGE_FILE && \
+     rm -f /etc/nginx/sites-enabled/default && \

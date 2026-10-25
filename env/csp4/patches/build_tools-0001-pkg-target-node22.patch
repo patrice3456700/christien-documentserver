@@ -1,0 +1,14 @@
+diff --git a/scripts/build_server.py b/scripts/build_server.py
+index 477469e..5ead907 100644
+--- a/scripts/build_server.py
++++ b/scripts/build_server.py
+@@ -61,7 +61,8 @@ def make():
+       base.copy_file(custom_public_key, server_dir + '/Common/sources')
+ 
+   #node22 packaging has issue https://github.com/yao-pkg/pkg/issues/87
+-  pkg_target = "node20"
++  # Christien: node20 is end of life (no fix for CVE-2026-111497); 22.23.4 via pkg-fetch 3.6.7
++  pkg_target = "node22"
+ 
+   if ("linux" == base.host_platform()):
+     pkg_target += "-linux"

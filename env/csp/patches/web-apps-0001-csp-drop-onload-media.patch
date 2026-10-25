@@ -1,0 +1,242 @@
+diff --git a/apps/documenteditor/embed/index.html.deploy b/apps/documenteditor/embed/index.html.deploy
+index 5b53e29618eb60e485c6c344db59ef0aa8e8caa3..d3d782a6215488f1c35afc9dc22c12ee63dcdc8e 100644
+--- a/apps/documenteditor/embed/index.html.deploy
++++ b/apps/documenteditor/embed/index.html.deploy
+@@ -268,6 +268,6 @@
+               );
+           }
+       </script>
+-      <link href="../../../apps/documenteditor/embed/resources/css/app-all.css" rel="stylesheet" media="print" onload="this.media='all'">
++      <link href="../../../apps/documenteditor/embed/resources/css/app-all.css" rel="stylesheet">
+   </body>
+ </html>
+diff --git a/apps/documenteditor/embed/index_loader.html.deploy b/apps/documenteditor/embed/index_loader.html.deploy
+index 0c79bbef8f2b7c725b319c06455ea9a603105159..b2ec778ccf73e678d47531675deeada934bc925f 100644
+--- a/apps/documenteditor/embed/index_loader.html.deploy
++++ b/apps/documenteditor/embed/index_loader.html.deploy
+@@ -352,6 +352,6 @@
+               );
+           }
+       </script>
+-      <link href="../../../apps/documenteditor/embed/resources/css/app-all.css" rel="stylesheet" media="print" onload="this.media='all'">
++      <link href="../../../apps/documenteditor/embed/resources/css/app-all.css" rel="stylesheet">
+   </body>
+ </html>
+diff --git a/apps/documenteditor/main/index.html.deploy b/apps/documenteditor/main/index.html.deploy
+index 3df1bc5450cc61a209699a523b292545e6f06c51..27aa24f92a17c35c446328d87be0190b802b26b7 100644
+--- a/apps/documenteditor/main/index.html.deploy
++++ b/apps/documenteditor/main/index.html.deploy
+@@ -438,6 +438,6 @@
+         isIEBrowser === true ? require(['ie/app']) : require(['app']);
+     </script>
+ 
+-    <link rel="stylesheet" href="../../../apps/documenteditor/main/resources/css/app.css" media="print" onload="this.media='all'">
++    <link rel="stylesheet" href="../../../apps/documenteditor/main/resources/css/app.css">
+ </body>
+ </html>
+diff --git a/apps/documenteditor/main/index_loader.html.deploy b/apps/documenteditor/main/index_loader.html.deploy
+index d16cab465a8d502936155b5e4d87e63afcf81f3e..b2567b85ddf29c42b5edf4ce3e9b715c2b1e46e5 100644
+--- a/apps/documenteditor/main/index_loader.html.deploy
++++ b/apps/documenteditor/main/index_loader.html.deploy
+@@ -344,6 +344,6 @@
+         isIEBrowser === true ? require(['ie/app']) : require(['app']);
+     </script>
+ 
+-    <link rel="stylesheet" type="text/css" href="../../../apps/documenteditor/main/resources/css/app.css" media="print" onload="this.media='all'">
++    <link rel="stylesheet" type="text/css" href="../../../apps/documenteditor/main/resources/css/app.css">
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/apps/pdfeditor/main/index.html.deploy b/apps/pdfeditor/main/index.html.deploy
+index 84d6a8c6ffb17b9f60f842a9e0eab94994aaaa52..13c5f3638a615ae608ef2b29839cdd4052cd5970 100644
+--- a/apps/pdfeditor/main/index.html.deploy
++++ b/apps/pdfeditor/main/index.html.deploy
+@@ -422,6 +422,6 @@
+             startApp();
+         }
+     </script>
+-    <link rel="stylesheet" href="../../../apps/pdfeditor/main/resources/css/app.css" media="print" onload="this.media='all'">
++    <link rel="stylesheet" href="../../../apps/pdfeditor/main/resources/css/app.css">
+ </body>
+ </html>
+diff --git a/apps/pdfeditor/main/index_loader.html.deploy b/apps/pdfeditor/main/index_loader.html.deploy
+index 9a29047316582a4fda24a80edd9e149fd441e136..c9b62cc99631aaa3a10380d32c21fdc3c4cfd696 100644
+--- a/apps/pdfeditor/main/index_loader.html.deploy
++++ b/apps/pdfeditor/main/index_loader.html.deploy
+@@ -358,6 +358,6 @@
+             startApp();
+         }
+     </script>
+-    <link rel="stylesheet" href="../../../apps/pdfeditor/main/resources/css/app.css" media="print" onload="this.media='all'">
++    <link rel="stylesheet" href="../../../apps/pdfeditor/main/resources/css/app.css">
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/apps/presentationeditor/embed/index.html.deploy b/apps/presentationeditor/embed/index.html.deploy
+index d46064baddd4a2026c5c222f3716855e0a4d1dc3..d3e6c6faa6d738fb1d202c3fcbebc564d2667f9e 100644
+--- a/apps/presentationeditor/embed/index.html.deploy
++++ b/apps/presentationeditor/embed/index.html.deploy
+@@ -249,7 +249,7 @@
+       <!--application-->
+       <script src="../../../../../../sdkjs/common/device_scale.js?__inline=true"></script>
+       <script type="text/javascript" src="../../../apps/presentationeditor/embed/app-all.js"></script>
+-      <link href="../../../apps/presentationeditor/embed/resources/css/app-all.css" rel="stylesheet" media="print" onload="this.media='all'">
++      <link href="../../../apps/presentationeditor/embed/resources/css/app-all.css" rel="stylesheet">
+       <script type="text/javascript">
+           var isBrowserSupported = function() {
+               return  ($.browser.msie     && parseFloat($.browser.version) > 9)     ||
+diff --git a/apps/presentationeditor/embed/index_loader.html.deploy b/apps/presentationeditor/embed/index_loader.html.deploy
+index c180297a01401fbb508c9c6330070e471c58a30a..af11faf01d68310cbf2bae19d9470439b8a20d5e 100644
+--- a/apps/presentationeditor/embed/index_loader.html.deploy
++++ b/apps/presentationeditor/embed/index_loader.html.deploy
+@@ -313,7 +313,7 @@
+       <!--application-->
+       <script src="../../../../../../sdkjs/common/device_scale.js?__inline=true"></script>
+       <script type="text/javascript" src="../../../apps/presentationeditor/embed/app-all.js"></script>
+-      <link href="../../../apps/presentationeditor/embed/resources/css/app-all.css" rel="stylesheet" media="print" onload="this.media='all'">
++      <link href="../../../apps/presentationeditor/embed/resources/css/app-all.css" rel="stylesheet">
+       <script type="text/javascript">
+           var isBrowserSupported = function() {
+               return  ($.browser.msie     && parseFloat($.browser.version) > 9)     ||
+diff --git a/apps/presentationeditor/main/index.html.deploy b/apps/presentationeditor/main/index.html.deploy
+index 0810963db2fe25429e778f818c666c2469ab00d1..9a9675e19fd2598b73d8ebf092f61dc777446214 100644
+--- a/apps/presentationeditor/main/index.html.deploy
++++ b/apps/presentationeditor/main/index.html.deploy
+@@ -458,6 +458,6 @@
+         isIEBrowser === true ? require(['ie/app']) : require(['app']);
+     </script>
+ 
+-    <link rel="stylesheet" href="../../../apps/presentationeditor/main/resources/css/app.css" media="print" onload="this.media='all'">
++    <link rel="stylesheet" href="../../../apps/presentationeditor/main/resources/css/app.css">
+ </body>
+ </html>
+diff --git a/apps/presentationeditor/main/index_loader.html.deploy b/apps/presentationeditor/main/index_loader.html.deploy
+index 9f8a133772149b91bfae07239fd7c37a2c6f251a..9f8b655e97a8030407dd191ed5f2882dce15579c 100644
+--- a/apps/presentationeditor/main/index_loader.html.deploy
++++ b/apps/presentationeditor/main/index_loader.html.deploy
+@@ -342,6 +342,6 @@
+         isIEBrowser === true ? require(['ie/app']) : require(['app']);
+     </script>
+ 
+-    <link rel="stylesheet" href="../../../apps/presentationeditor/main/resources/css/app.css" media="print" onload="this.media='all'">
++    <link rel="stylesheet" href="../../../apps/presentationeditor/main/resources/css/app.css">
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/apps/spreadsheeteditor/embed/index.html.deploy b/apps/spreadsheeteditor/embed/index.html.deploy
+index 38290ed0758268401acf69b8aaef0ecf359f6e2d..0abbe1e4113815ec19f24906b923d392906439f3 100644
+--- a/apps/spreadsheeteditor/embed/index.html.deploy
++++ b/apps/spreadsheeteditor/embed/index.html.deploy
+@@ -230,7 +230,7 @@
+       <!--application-->
+       <script src="../../../../../../sdkjs/common/device_scale.js?__inline=true"></script>
+       <script type="text/javascript" src="../../../apps/spreadsheeteditor/embed/app-all.js"></script>
+-      <link href="../../../apps/spreadsheeteditor/embed/resources/css/app-all.css" rel="stylesheet" media="print" onload="this.media='all'">
++      <link href="../../../apps/spreadsheeteditor/embed/resources/css/app-all.css" rel="stylesheet">
+       <script type="text/javascript">
+           var isBrowserSupported = function() {
+               return  ($.browser.msie     && parseFloat($.browser.version) > 9)     ||
+diff --git a/apps/spreadsheeteditor/embed/index_loader.html.deploy b/apps/spreadsheeteditor/embed/index_loader.html.deploy
+index 1d595be37eba304c4340178342273de9fd1375b9..d283ba672203d390d6f76fad3bc15d21844754c3 100644
+--- a/apps/spreadsheeteditor/embed/index_loader.html.deploy
++++ b/apps/spreadsheeteditor/embed/index_loader.html.deploy
+@@ -321,7 +321,7 @@
+       <!--application-->
+       <script src="../../../../../../sdkjs/common/device_scale.js?__inline=true"></script>
+       <script type="text/javascript" src="../../../apps/spreadsheeteditor/embed/app-all.js"></script>
+-      <link href="../../../apps/spreadsheeteditor/embed/resources/css/app-all.css" rel="stylesheet" media="print" onload="this.media='all'">
++      <link href="../../../apps/spreadsheeteditor/embed/resources/css/app-all.css" rel="stylesheet">
+       <script type="text/javascript">
+           var isBrowserSupported = function() {
+               return  ($.browser.msie     && parseFloat($.browser.version) > 9)     ||
+diff --git a/apps/spreadsheeteditor/main/index.html.deploy b/apps/spreadsheeteditor/main/index.html.deploy
+index 4feeffdfb88eeef05f8ea62364dd2bca1236f077..8ecd942e6d7de03b8f85ad371b3eeb475dc3544a 100644
+--- a/apps/spreadsheeteditor/main/index.html.deploy
++++ b/apps/spreadsheeteditor/main/index.html.deploy
+@@ -525,6 +525,6 @@
+     <script>
+         isIEBrowser === true ? require(['ie/app']) : require(['app']);
+     </script>
+-    <link rel="stylesheet" href="../../../apps/spreadsheeteditor/main/resources/css/app.css" media="print" onload="this.media='all'">    
++    <link rel="stylesheet" href="../../../apps/spreadsheeteditor/main/resources/css/app.css">    
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/apps/spreadsheeteditor/main/index_internal.html.deploy b/apps/spreadsheeteditor/main/index_internal.html.deploy
+index 9979f58f57a669ba8dbd51b12da2628e4475f80f..113ea212a4f7259cf0d0740b69a24f6e4c4ae299 100644
+--- a/apps/spreadsheeteditor/main/index_internal.html.deploy
++++ b/apps/spreadsheeteditor/main/index_internal.html.deploy
+@@ -289,6 +289,6 @@
+         isIEBrowser === true ? require(['ie/app']) : require(['app']);
+     </script>
+ 
+-    <link rel="stylesheet" href="../../../apps/spreadsheeteditor/main/resources/css/app.css" media="print" onload="this.media='all'">
++    <link rel="stylesheet" href="../../../apps/spreadsheeteditor/main/resources/css/app.css">
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/apps/spreadsheeteditor/main/index_loader.html.deploy b/apps/spreadsheeteditor/main/index_loader.html.deploy
+index cb18fef1308790c08dd0b68d5cbc232d9bcd0340..66a8545abc450ad798794b33fba0851c144d9ac1 100644
+--- a/apps/spreadsheeteditor/main/index_loader.html.deploy
++++ b/apps/spreadsheeteditor/main/index_loader.html.deploy
+@@ -343,6 +343,6 @@
+         isIEBrowser === true ? require(['ie/app']) : require(['app']);
+     </script>
+ 
+-    <link rel="stylesheet" href="../../../apps/spreadsheeteditor/main/resources/css/app.css" media="print" onload="this.media='all'">
++    <link rel="stylesheet" href="../../../apps/spreadsheeteditor/main/resources/css/app.css">
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/apps/visioeditor/embed/index.html.deploy b/apps/visioeditor/embed/index.html.deploy
+index 1fe6e3e9dac0cf80c89116c1f473dd374600e7f1..f9b006fa1ec227b7de90e3331bc8209b0251bc7a 100644
+--- a/apps/visioeditor/embed/index.html.deploy
++++ b/apps/visioeditor/embed/index.html.deploy
+@@ -236,7 +236,7 @@
+       <!--application-->
+       <script src="../../../../../../sdkjs/common/device_scale.js?__inline=true"></script>
+       <script type="text/javascript" src="../../../apps/visioeditor/embed/app-all.js"></script>
+-      <link href="../../../apps/visioeditor/embed/resources/css/app-all.css" rel="stylesheet" media="print" onload="this.media='all'">
++      <link href="../../../apps/visioeditor/embed/resources/css/app-all.css" rel="stylesheet">
+       <script type="text/javascript">
+           var isBrowserSupported = function() {
+               return  ($.browser.msie     && parseFloat($.browser.version) > 9)     ||
+diff --git a/apps/visioeditor/embed/index_loader.html.deploy b/apps/visioeditor/embed/index_loader.html.deploy
+index 0bd2a928198d469e70b638d08dfcd3362b51d0b0..a6b3e603c3b419c7b489682b1bd1465a98f15860 100644
+--- a/apps/visioeditor/embed/index_loader.html.deploy
++++ b/apps/visioeditor/embed/index_loader.html.deploy
+@@ -319,7 +319,7 @@
+       <!--application-->
+       <script src="../../../../../../sdkjs/common/device_scale.js?__inline=true"></script>
+       <script type="text/javascript" src="../../../apps/visioeditor/embed/app-all.js"></script>
+-      <link href="../../../apps/visioeditor/embed/resources/css/app-all.css" rel="stylesheet" media="print" onload="this.media='all'">
++      <link href="../../../apps/visioeditor/embed/resources/css/app-all.css" rel="stylesheet">
+       <script type="text/javascript">
+           var isBrowserSupported = function() {
+               return  ($.browser.msie     && parseFloat($.browser.version) > 9)     ||
+diff --git a/apps/visioeditor/main/index.html.deploy b/apps/visioeditor/main/index.html.deploy
+index 4c11801006984c0458e913e4d77b32d32499276e..da7a8469e67e565d5246e42cafbc464800ecfa65 100644
+--- a/apps/visioeditor/main/index.html.deploy
++++ b/apps/visioeditor/main/index.html.deploy
+@@ -508,6 +508,6 @@
+         isIEBrowser === true ? require(['ie/app']) : require(['app']);
+     </script>
+ 
+-    <link rel="stylesheet" href="../../../apps/visioeditor/main/resources/css/app.css" media="print" onload="this.media='all'">
++    <link rel="stylesheet" href="../../../apps/visioeditor/main/resources/css/app.css">
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/apps/visioeditor/main/index_loader.html.deploy b/apps/visioeditor/main/index_loader.html.deploy
+index 779daaadb12aaf814502acf6e51e26c78a66b731..8fc07ec61d3d0a433c84ae9a26bb9c6b5d5560d1 100644
+--- a/apps/visioeditor/main/index_loader.html.deploy
++++ b/apps/visioeditor/main/index_loader.html.deploy
+@@ -339,6 +339,6 @@
+         isIEBrowser === true ? require(['ie/app']) : require(['app']);
+     </script>
+ 
+-    <link rel="stylesheet" href="../../../apps/visioeditor/main/resources/css/app.css" media="print" onload="this.media='all'">
++    <link rel="stylesheet" href="../../../apps/visioeditor/main/resources/css/app.css">
+ </body>
+ </html>
+\ No newline at end of file

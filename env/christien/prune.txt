@@ -1,0 +1,11 @@
+# Surface removed from the build output (paths relative to build_tools/out/linux_64/<company>/documentserver),
+# after minify and before packaging. Applied by csp-build.sh (PRUNE=...). Sources upstream are not modified.
+# Nothing visible is removed: logos, Ascensio mentions, copyright headers, LICENSE.txt and 3rd-Party.txt stay.
+# Kept on purpose (2026-10-21): sdkjs/visio + visioeditor (viewer option), pdfeditor, */mobile.
+
+# macro code editor; the integration sets macros: false and macrosMode: 'disable'
+web-apps/vendor/monaco
+# plugins and their marketplace; the integration sets plugins: false (the package recreates an empty sdkjs-plugins dir)
+sdkjs-plugins
+# welcome page served at / by the docservice (nginx ds-docservice.conf redirects / to it)
+server/welcome

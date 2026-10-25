@@ -1,0 +1,3194 @@
+{
+ "product": "christien-documentserver",
+ "version": "10.0.0-176",
+ "variant": "csp5",
+ "generated": "2026-10-24T18:05:41+0200",
+ "upstream_tag": "v10.0.0.176",
+ "build_vars": {
+  "build_tools": {
+   "branch": "tags/v10.0.0.176",
+   "module": "server",
+   "PRODUCT_VERSION": "10.0.0",
+   "BUILD_NUMBER": "176",
+   "branding": "--branding-name=christien",
+   "COMPANY_NAME": "Christien EI"
+  },
+  "package": {
+   "COMPANY_NAME": "Christien",
+   "PRODUCT_NAME": "DocumentServer",
+   "PRODUCT_VERSION": "10.0.0",
+   "BUILD_NUMBER": "176",
+   "BRANDING": "christien",
+   "PKG_TARGET": "node22-linuxstatic-x64"
+  },
+  "image": {
+   "COMPANY_NAME": "christien",
+   "PRODUCT_NAME": "documentserver",
+   "PACKAGE_VERSION": "10.0.0-176",
+   "PACKAGE_BASEURL": "http://christien-packages/csp5",
+   "TARGETARCH": "amd64",
+   "builder": "classic (DOCKER_BUILDKIT=0)",
+   "BASE_IMAGE": "ubuntu:24.04"
+  },
+  "pkg_target": "node22 (Node 22.23.4, pkg 6.24.0, pkg-fetch 3.6.7)",
+  "parallelism": {
+   "MAKE_MAX_JOBS": 6,
+   "cpus": 6,
+   "memory": "12g"
+  }
+ },
+ "images": {
+  "ubuntu:24.04": "sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac",
+  "builder_deps": {
+   "ref": "christien-builder-deps:9.4.0.129-node22",
+   "id": "sha256:3634822a3fd05b26848d816ed8fc07bad1ecd1f9bcb59b5ce5ff1ad9987e895b",
+   "dockerfile": "env/csp4/toolchain/Dockerfile"
+  },
+  "builder_pinned": {
+   "ref": "christien-builder:9.4.0.129-pinned-node22",
+   "id": "sha256:deaf24ecbc7d25f436e4fb8435d2345c1850f15d0475fe3471cf2a3498e48741",
+   "dockerfile": "env/csp4/toolchain/Dockerfile"
+  },
+  "mirror_server": {
+   "ref": "christien-builder-deps:9.4.0.129",
+   "id": "sha256:19b41a6a5ad672840ccc58d491b9179346f1a3c9c7af96f30e0ea1d5baebdd37"
+  },
+  "result": {
+   "ref": "christien/documentserver:10.0.0-176-csp5",
+   "id": "sha256:db31e7c6c79d22d40341a3ceea8dcc072a804b5c42cbb018a7157a4e62079d0d"
+  }
+ },
+ "build": {
+  "script": "env/csp4/csp4-offline.sh",
+  "network": "internal Docker network, the mirror as only peer",
+  "logs": "logs/B*-csp5-*",
+  "package": {
+   "file": "christien-documentserver_10.0.0-176_amd64.deb",
+   "sha256": "67d67f130f4acf4cb96c08e24edcdba81abbabc11b73e28ad0ae59d46df94378",
+   "bytes": 594630944
+  }
+ },
+ "apt_snapshot_for_image": {
+  "snapshot": "https://snapshot.ubuntu.com/ubuntu/20261024T000000Z/",
+  "mirror_path": "mirror/apt/20261024T000000Z",
+  "files": 145,
+  "bytes": 69296363
+ },
+ "repositories": [
+  {
+   "url": "https://github.com/Distrotech/libodfgen.git",
+   "mirror_path": "mirror/git/github.com/Distrotech/libodfgen.git",
+   "present": true,
+   "consumed_commits": [
+    "8ef8c171ebe3c5daebdce80ee422cf7bb96aa3bc"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/Distrotech/librevenge.git",
+   "mirror_path": "mirror/git/github.com/Distrotech/librevenge.git",
+   "present": true,
+   "consumed_commits": [
+    "becd044b519ab83893ad6398e3cbb499a7f0aaf4"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/GNOME/libxml2.git",
+   "mirror_path": "mirror/git/github.com/GNOME/libxml2.git",
+   "present": true,
+   "consumed_commits": [
+    "39b66eb2089f491eacf8e22a7965a235f7f5735e"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/LibreOffice/libetonyek.git",
+   "mirror_path": "mirror/git/github.com/LibreOffice/libetonyek.git",
+   "present": true,
+   "consumed_commits": [
+    "cb396b4a9453a457469b62a740d8fb933c9442c3"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/Multicorewareinc/x265.git",
+   "mirror_path": "mirror/git/github.com/Multicorewareinc/x265.git",
+   "present": true,
+   "consumed_commits": [
+    "32e25ffcf810c5fe284901859b369270824c4596"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/ONLYOFFICE/Docker-DocumentServer.git",
+   "mirror_path": "mirror/git/github.com/ONLYOFFICE/Docker-DocumentServer.git",
+   "present": true,
+   "consumed_commits": [
+    "839b73b568db94d117fdeaf3374f55f78ee9b1db"
+   ],
+   "tag_v10.0.0.176": "839b73b568db94d117fdeaf3374f55f78ee9b1db",
+   "tag_consumed": true
+  },
+  {
+   "url": "https://github.com/ONLYOFFICE/build_tools.git",
+   "mirror_path": "mirror/git/github.com/ONLYOFFICE/build_tools.git",
+   "present": true,
+   "consumed_commits": [
+    "8cccb383182f45f5171a7c6d62f49ebf37aab400"
+   ],
+   "tag_v10.0.0.176": "8cccb383182f45f5171a7c6d62f49ebf37aab400",
+   "tag_consumed": true
+  },
+  {
+   "url": "https://github.com/ONLYOFFICE/core-fonts.git",
+   "mirror_path": "mirror/git/github.com/ONLYOFFICE/core-fonts.git",
+   "present": true,
+   "consumed_commits": [
+    "7030c6681fb5bbed560675cb42422f91df15d5c9"
+   ],
+   "tag_v10.0.0.176": "7030c6681fb5bbed560675cb42422f91df15d5c9",
+   "tag_consumed": true
+  },
+  {
+   "url": "https://github.com/ONLYOFFICE/core.git",
+   "mirror_path": "mirror/git/github.com/ONLYOFFICE/core.git",
+   "present": true,
+   "consumed_commits": [
+    "76af764fcb777291098c73728044249b6893af6a"
+   ],
+   "tag_v10.0.0.176": "76af764fcb777291098c73728044249b6893af6a",
+   "tag_consumed": true
+  },
+  {
+   "url": "https://github.com/ONLYOFFICE/dictionaries.git",
+   "mirror_path": "mirror/git/github.com/ONLYOFFICE/dictionaries.git",
+   "present": true,
+   "consumed_commits": [
+    "d3223bbb777883db66ac3cd249f71c6ebdc992c7"
+   ],
+   "tag_v10.0.0.176": "d3223bbb777883db66ac3cd249f71c6ebdc992c7",
+   "tag_consumed": true
+  },
+  {
+   "url": "https://github.com/ONLYOFFICE/document-formats.git",
+   "mirror_path": "mirror/git/github.com/ONLYOFFICE/document-formats.git",
+   "present": true,
+   "consumed_commits": [
+    "27188bac1f82c6ff0e7f02235cdbca22053a768e",
+    "7d7576a3fe2337c30f4c9b40fae70a69dc68ba08"
+   ],
+   "tag_v10.0.0.176": "27188bac1f82c6ff0e7f02235cdbca22053a768e",
+   "tag_consumed": true
+  },
+  {
+   "url": "https://github.com/ONLYOFFICE/document-server-integration.git",
+   "mirror_path": "mirror/git/github.com/ONLYOFFICE/document-server-integration.git",
+   "present": true,
+   "consumed_commits": [
+    "d57c945a1b971627a35c45709efe7a5167d95199"
+   ],
+   "tag_v10.0.0.176": "d57c945a1b971627a35c45709efe7a5167d95199",
+   "tag_consumed": true
+  },
+  {
+   "url": "https://github.com/ONLYOFFICE/document-server-package.git",
+   "mirror_path": "mirror/git/github.com/ONLYOFFICE/document-server-package.git",
+   "present": true,
+   "consumed_commits": [
+    "8dc6a813f636d72821be21661d8dd151bf674aa8"
+   ],
+   "tag_v10.0.0.176": "8dc6a813f636d72821be21661d8dd151bf674aa8",
+   "tag_consumed": true
+  },
+  {
+   "url": "https://github.com/ONLYOFFICE/document-templates.git",
+   "mirror_path": "mirror/git/github.com/ONLYOFFICE/document-templates.git",
+   "present": true,
+   "consumed_commits": [
+    "0a52fb76fa53fddf7d70da28878537cde3d29421",
+    "d600e9b0728213e775d122fcbf30f4491b8cdfe5"
+   ],
+   "tag_v10.0.0.176": "0a52fb76fa53fddf7d70da28878537cde3d29421",
+   "tag_consumed": true
+  },
+  {
+   "url": "https://github.com/ONLYOFFICE/onlyoffice.github.io.git",
+   "mirror_path": "mirror/git/github.com/ONLYOFFICE/onlyoffice.github.io.git",
+   "present": true,
+   "consumed_commits": [
+    "f3263c055c25875874004463b46c2e6a7000a9fd"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/ONLYOFFICE/plugin-aiautofill.git",
+   "mirror_path": "mirror/git/github.com/ONLYOFFICE/plugin-aiautofill.git",
+   "present": true,
+   "consumed_commits": [
+    "d1cfdef278acfd8cd87ff4818947927aababfe97"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/ONLYOFFICE/sdkjs-forms.git",
+   "mirror_path": "mirror/git/github.com/ONLYOFFICE/sdkjs-forms.git",
+   "present": true,
+   "consumed_commits": [
+    "0148c8ed3f799136431be49d4d83b4064fbafd01"
+   ],
+   "tag_v10.0.0.176": "0148c8ed3f799136431be49d4d83b4064fbafd01",
+   "tag_consumed": true
+  },
+  {
+   "url": "https://github.com/ONLYOFFICE/sdkjs.git",
+   "mirror_path": "mirror/git/github.com/ONLYOFFICE/sdkjs.git",
+   "present": true,
+   "consumed_commits": [
+    "c1a29cc83824661d799711be14ef12b6125302f3"
+   ],
+   "tag_v10.0.0.176": "c1a29cc83824661d799711be14ef12b6125302f3",
+   "tag_consumed": true
+  },
+  {
+   "url": "https://github.com/ONLYOFFICE/server.git",
+   "mirror_path": "mirror/git/github.com/ONLYOFFICE/server.git",
+   "present": true,
+   "consumed_commits": [
+    "f9a8df6e7c9aa388c0d525965923c803f4cbc071"
+   ],
+   "tag_v10.0.0.176": "f9a8df6e7c9aa388c0d525965923c803f4cbc071",
+   "tag_consumed": true
+  },
+  {
+   "url": "https://github.com/ONLYOFFICE/web-apps.git",
+   "mirror_path": "mirror/git/github.com/ONLYOFFICE/web-apps.git",
+   "present": true,
+   "consumed_commits": [
+    "493e500c56ec96ccaa0452ab092cbce23b6dcc2e"
+   ],
+   "tag_v10.0.0.176": "493e500c56ec96ccaa0452ab092cbce23b6dcc2e",
+   "tag_consumed": true
+  },
+  {
+   "url": "https://github.com/boostorg/accumulators.git",
+   "mirror_path": "mirror/git/github.com/boostorg/accumulators.git",
+   "present": true,
+   "consumed_commits": [
+    "b12a189fefd17ff3a6a68fc24b4135f0e0c498f6"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/algorithm.git",
+   "mirror_path": "mirror/git/github.com/boostorg/algorithm.git",
+   "present": true,
+   "consumed_commits": [
+    "e59958cc4d7559e70047f7ff3e467bdc9a670e63"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/align.git",
+   "mirror_path": "mirror/git/github.com/boostorg/align.git",
+   "present": true,
+   "consumed_commits": [
+    "71101b0dfc884a785a072773ae5a8e9e55e50a95"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/any.git",
+   "mirror_path": "mirror/git/github.com/boostorg/any.git",
+   "present": true,
+   "consumed_commits": [
+    "e0e7e8d42ea609f6d866524f8f8b3d35af9a1eb5"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/array.git",
+   "mirror_path": "mirror/git/github.com/boostorg/array.git",
+   "present": true,
+   "consumed_commits": [
+    "32b074c9ae44ba0a34d6ea8ada65971191e675ee"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/asio.git",
+   "mirror_path": "mirror/git/github.com/boostorg/asio.git",
+   "present": true,
+   "consumed_commits": [
+    "2f38e7ab8706368f6d980158442b313388746fd4"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/assert.git",
+   "mirror_path": "mirror/git/github.com/boostorg/assert.git",
+   "present": true,
+   "consumed_commits": [
+    "b45979a319f28784db8924943abe8774efd13cf9"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/assign.git",
+   "mirror_path": "mirror/git/github.com/boostorg/assign.git",
+   "present": true,
+   "consumed_commits": [
+    "d30e5c2d3796740445e992230eb7e4d7712d219b"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/atomic.git",
+   "mirror_path": "mirror/git/github.com/boostorg/atomic.git",
+   "present": true,
+   "consumed_commits": [
+    "5c519b0611e3de81ae6aa081b7323a7458071480"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/auto_index.git",
+   "mirror_path": "mirror/git/github.com/boostorg/auto_index.git",
+   "present": true,
+   "consumed_commits": [
+    "e98a81769364f56b272e510c876df874af514b29"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/bcp.git",
+   "mirror_path": "mirror/git/github.com/boostorg/bcp.git",
+   "present": true,
+   "consumed_commits": [
+    "a86fdce7885babae3ff625de36aa2dfacf983f8c"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/beast.git",
+   "mirror_path": "mirror/git/github.com/boostorg/beast.git",
+   "present": true,
+   "consumed_commits": [
+    "0b68ed651b6bc7b681cf440ed6a220089e21473f"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/bimap.git",
+   "mirror_path": "mirror/git/github.com/boostorg/bimap.git",
+   "present": true,
+   "consumed_commits": [
+    "216282251428aa07a11151c012387144ac6a0f5c"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/bind.git",
+   "mirror_path": "mirror/git/github.com/boostorg/bind.git",
+   "present": true,
+   "consumed_commits": [
+    "d6ac20c4fdfb9103a4a5d15f2499c339e525e2a4"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/boost.git",
+   "mirror_path": "mirror/git/github.com/boostorg/boost.git",
+   "present": true,
+   "consumed_commits": [
+    "789155d431930ebef4766550ed7bd09f62eac714"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/boost_install.git",
+   "mirror_path": "mirror/git/github.com/boostorg/boost_install.git",
+   "present": true,
+   "consumed_commits": [
+    "c1e6a010f7ffb2da696f599d0863ad58119e9143"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/boostbook.git",
+   "mirror_path": "mirror/git/github.com/boostorg/boostbook.git",
+   "present": true,
+   "consumed_commits": [
+    "2f9b23ea4de479518781b59b4f57cd480e4308c0"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/boostdep.git",
+   "mirror_path": "mirror/git/github.com/boostorg/boostdep.git",
+   "present": true,
+   "consumed_commits": [
+    "143dcd262f01dbc1ad2b1469cb08e2b346766dc7"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/build.git",
+   "mirror_path": "mirror/git/github.com/boostorg/build.git",
+   "present": true,
+   "consumed_commits": [
+    "ceddb211c6e0ab7f0abf6c253f1f6e392d6a38b4"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/callable_traits.git",
+   "mirror_path": "mirror/git/github.com/boostorg/callable_traits.git",
+   "present": true,
+   "consumed_commits": [
+    "454b8ade9c8356f27fb0b3c6cbbb9bd8b9477af3"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/check_build.git",
+   "mirror_path": "mirror/git/github.com/boostorg/check_build.git",
+   "present": true,
+   "consumed_commits": [
+    "d5a07527906a8779fbe2b994ff9d287fb0c31af0"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/chrono.git",
+   "mirror_path": "mirror/git/github.com/boostorg/chrono.git",
+   "present": true,
+   "consumed_commits": [
+    "5df12496f52e00b1ea324df176a4a3199d3d8bfd"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/circular_buffer.git",
+   "mirror_path": "mirror/git/github.com/boostorg/circular_buffer.git",
+   "present": true,
+   "consumed_commits": [
+    "7808ab19dcc2c801747eec52689c179681f3d125"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/compatibility.git",
+   "mirror_path": "mirror/git/github.com/boostorg/compatibility.git",
+   "present": true,
+   "consumed_commits": [
+    "445fbc1633cbaf49b0c3310db95a642e9c3fe89b"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/compute.git",
+   "mirror_path": "mirror/git/github.com/boostorg/compute.git",
+   "present": true,
+   "consumed_commits": [
+    "36c89134d4013b2e5e45bc55656a18bd6141995a"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/concept_check.git",
+   "mirror_path": "mirror/git/github.com/boostorg/concept_check.git",
+   "present": true,
+   "consumed_commits": [
+    "db1f9c73a43fc527a43a66bd77d8981b845c8712"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/config.git",
+   "mirror_path": "mirror/git/github.com/boostorg/config.git",
+   "present": true,
+   "consumed_commits": [
+    "dc67f3ea657dc70fdd27af8c0c866feb6c335dfc"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/container.git",
+   "mirror_path": "mirror/git/github.com/boostorg/container.git",
+   "present": true,
+   "consumed_commits": [
+    "e3f6dc44ad751e4c49a8776fd20d76aa3809bac1"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/container_hash.git",
+   "mirror_path": "mirror/git/github.com/boostorg/container_hash.git",
+   "present": true,
+   "consumed_commits": [
+    "9fbda1a98a32498c52a1c8ebf62311bb36a44ad4"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/context.git",
+   "mirror_path": "mirror/git/github.com/boostorg/context.git",
+   "present": true,
+   "consumed_commits": [
+    "bd493f77d8b65f794117ea333a9c9f19964fbd9f"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/contract.git",
+   "mirror_path": "mirror/git/github.com/boostorg/contract.git",
+   "present": true,
+   "consumed_commits": [
+    "3c77288d52fd19ef8c317bbecc7b08362251ff3e"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/conversion.git",
+   "mirror_path": "mirror/git/github.com/boostorg/conversion.git",
+   "present": true,
+   "consumed_commits": [
+    "9d4a518e74acd9f3ca6b0716ba5dc8bead28d253"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/convert.git",
+   "mirror_path": "mirror/git/github.com/boostorg/convert.git",
+   "present": true,
+   "consumed_commits": [
+    "2e3386ff0f5ee4728696fb0d9853feb844cae993"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/core.git",
+   "mirror_path": "mirror/git/github.com/boostorg/core.git",
+   "present": true,
+   "consumed_commits": [
+    "259587da7f36421e271826bf0b9efc87520cf491"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/coroutine.git",
+   "mirror_path": "mirror/git/github.com/boostorg/coroutine.git",
+   "present": true,
+   "consumed_commits": [
+    "143edd3d2a654d82c66ea9fb53922e998a918eff"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/coroutine2.git",
+   "mirror_path": "mirror/git/github.com/boostorg/coroutine2.git",
+   "present": true,
+   "consumed_commits": [
+    "18bcccf34dcd80f4be1cd1c897778a2c9536c11f"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/crc.git",
+   "mirror_path": "mirror/git/github.com/boostorg/crc.git",
+   "present": true,
+   "consumed_commits": [
+    "7002d9850d78c279c28724b2e58227d9b8bf7422"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/date_time.git",
+   "mirror_path": "mirror/git/github.com/boostorg/date_time.git",
+   "present": true,
+   "consumed_commits": [
+    "e26fd2ed98c96a192de4dbd6358ebd6764eb2836"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/detail.git",
+   "mirror_path": "mirror/git/github.com/boostorg/detail.git",
+   "present": true,
+   "consumed_commits": [
+    "8dbbfe372b83f7ff32d545bad1c779348bfe3eea"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/disjoint_sets.git",
+   "mirror_path": "mirror/git/github.com/boostorg/disjoint_sets.git",
+   "present": true,
+   "consumed_commits": [
+    "4980fe2a87ead3b2e8260aed6e9c8835266cd5d7"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/dll.git",
+   "mirror_path": "mirror/git/github.com/boostorg/dll.git",
+   "present": true,
+   "consumed_commits": [
+    "8f39a38a3188a510054d86ee15bc523494676cdc"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/dynamic_bitset.git",
+   "mirror_path": "mirror/git/github.com/boostorg/dynamic_bitset.git",
+   "present": true,
+   "consumed_commits": [
+    "db5da12bcd7f321d735b77654290ff7e7329ec17"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/endian.git",
+   "mirror_path": "mirror/git/github.com/boostorg/endian.git",
+   "present": true,
+   "consumed_commits": [
+    "3de20eb340d27792b736d0d2d356e4ac3b52b8c4"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/exception.git",
+   "mirror_path": "mirror/git/github.com/boostorg/exception.git",
+   "present": true,
+   "consumed_commits": [
+    "c44bdae6acf7a4bf06421e44e2938a0f130e2031"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/fiber.git",
+   "mirror_path": "mirror/git/github.com/boostorg/fiber.git",
+   "present": true,
+   "consumed_commits": [
+    "6d74aab51f6c2150db0a0fd09ef33f1aa8668695"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/filesystem.git",
+   "mirror_path": "mirror/git/github.com/boostorg/filesystem.git",
+   "present": true,
+   "consumed_commits": [
+    "93f0c76869c8a7a04b79f0719393f31b878284a2"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/flyweight.git",
+   "mirror_path": "mirror/git/github.com/boostorg/flyweight.git",
+   "present": true,
+   "consumed_commits": [
+    "86347695b5c9ab834fab12d6a58347c0cad4ef70"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/foreach.git",
+   "mirror_path": "mirror/git/github.com/boostorg/foreach.git",
+   "present": true,
+   "consumed_commits": [
+    "88c8eae6759f1984dd7e22629660f0e39c5907ee"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/format.git",
+   "mirror_path": "mirror/git/github.com/boostorg/format.git",
+   "present": true,
+   "consumed_commits": [
+    "894f465d843d999b5c024a49f90a5a1013edd368"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/function.git",
+   "mirror_path": "mirror/git/github.com/boostorg/function.git",
+   "present": true,
+   "consumed_commits": [
+    "8ec9323003f66bf5733f3ac8f6ccb25f79f2762b"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/function_types.git",
+   "mirror_path": "mirror/git/github.com/boostorg/function_types.git",
+   "present": true,
+   "consumed_commits": [
+    "ae4fde2e2ae88291d6d656137169ff4003d184a1"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/functional.git",
+   "mirror_path": "mirror/git/github.com/boostorg/functional.git",
+   "present": true,
+   "consumed_commits": [
+    "28b1b25b9464abb3fd5783e10f49df40d6aac2ff"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/fusion.git",
+   "mirror_path": "mirror/git/github.com/boostorg/fusion.git",
+   "present": true,
+   "consumed_commits": [
+    "81a1c2c99a06d35852a3686d6d461c3290fbccd5"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/geometry.git",
+   "mirror_path": "mirror/git/github.com/boostorg/geometry.git",
+   "present": true,
+   "consumed_commits": [
+    "667e83701fb14e66390bd9499112ee1bd4b2e081"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/gil.git",
+   "mirror_path": "mirror/git/github.com/boostorg/gil.git",
+   "present": true,
+   "consumed_commits": [
+    "4325be7f7dbf3f3a26ad5025390943ca199dc030"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/graph.git",
+   "mirror_path": "mirror/git/github.com/boostorg/graph.git",
+   "present": true,
+   "consumed_commits": [
+    "8f5e1f1bf91c7302b8448bdc899dc68312e3acd5"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/graph_parallel.git",
+   "mirror_path": "mirror/git/github.com/boostorg/graph_parallel.git",
+   "present": true,
+   "consumed_commits": [
+    "22385ccb6c35fcb07971f295807519bd031ed57d"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/hana.git",
+   "mirror_path": "mirror/git/github.com/boostorg/hana.git",
+   "present": true,
+   "consumed_commits": [
+    "07b42492765f7384e053c4761f4d0eda32b75834"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/headers.git",
+   "mirror_path": "mirror/git/github.com/boostorg/headers.git",
+   "present": true,
+   "consumed_commits": [
+    "017c3cd1338b5437f28506cd14119b7dcfb1a86d"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/heap.git",
+   "mirror_path": "mirror/git/github.com/boostorg/heap.git",
+   "present": true,
+   "consumed_commits": [
+    "48d96def311bf170b8e3ab410ea0f170ba1d460c"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/histogram.git",
+   "mirror_path": "mirror/git/github.com/boostorg/histogram.git",
+   "present": true,
+   "consumed_commits": [
+    "e415be10cd8df9d2ba386449f846f7197f7d5459"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/hof.git",
+   "mirror_path": "mirror/git/github.com/boostorg/hof.git",
+   "present": true,
+   "consumed_commits": [
+    "a5fcba3ae4410d217a7a80a782238bb18fa7925a"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/icl.git",
+   "mirror_path": "mirror/git/github.com/boostorg/icl.git",
+   "present": true,
+   "consumed_commits": [
+    "adaf950fadf370ed4b8a33153d6510bff242ff06"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/inspect.git",
+   "mirror_path": "mirror/git/github.com/boostorg/inspect.git",
+   "present": true,
+   "consumed_commits": [
+    "7cb1d297c29717b7536d21ddbcfc9d64dad83652"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/integer.git",
+   "mirror_path": "mirror/git/github.com/boostorg/integer.git",
+   "present": true,
+   "consumed_commits": [
+    "bee5818e18cf33f06f776556fdacec694c0259d1"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/interprocess.git",
+   "mirror_path": "mirror/git/github.com/boostorg/interprocess.git",
+   "present": true,
+   "consumed_commits": [
+    "d2cb6e6f0f6cfd1362a5f5750756f94f76fc13d3"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/interval.git",
+   "mirror_path": "mirror/git/github.com/boostorg/interval.git",
+   "present": true,
+   "consumed_commits": [
+    "6db1ad0d2027d812bcbb26802196c5444c59e585"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/intrusive.git",
+   "mirror_path": "mirror/git/github.com/boostorg/intrusive.git",
+   "present": true,
+   "consumed_commits": [
+    "3b5001f22f342e62a6f732b0bc58817a608a752f"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/io.git",
+   "mirror_path": "mirror/git/github.com/boostorg/io.git",
+   "present": true,
+   "consumed_commits": [
+    "5fa66f1f76fb9142765692cc0cf6e40af8d08c45"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/iostreams.git",
+   "mirror_path": "mirror/git/github.com/boostorg/iostreams.git",
+   "present": true,
+   "consumed_commits": [
+    "601244b26aba14a2524ab1307243d0c5ea566206"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/iterator.git",
+   "mirror_path": "mirror/git/github.com/boostorg/iterator.git",
+   "present": true,
+   "consumed_commits": [
+    "d528fc0b11c91eec8851878e1aaac159d1131020"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/lambda.git",
+   "mirror_path": "mirror/git/github.com/boostorg/lambda.git",
+   "present": true,
+   "consumed_commits": [
+    "8824e81d52489be9c8cb21d8f8477b03e675ce66"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/lexical_cast.git",
+   "mirror_path": "mirror/git/github.com/boostorg/lexical_cast.git",
+   "present": true,
+   "consumed_commits": [
+    "87ce72192836787ff7bc8628abf0f0a68d56001d"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/litre.git",
+   "mirror_path": "mirror/git/github.com/boostorg/litre.git",
+   "present": true,
+   "consumed_commits": [
+    "564d4d8d30b7e03ac5e25d78e14d2c19fa321c83"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/local_function.git",
+   "mirror_path": "mirror/git/github.com/boostorg/local_function.git",
+   "present": true,
+   "consumed_commits": [
+    "9ea3674299e3185ccdacf9dad5060d070ae9d77e"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/locale.git",
+   "mirror_path": "mirror/git/github.com/boostorg/locale.git",
+   "present": true,
+   "consumed_commits": [
+    "ccb8fbb9a1a0dbdffb1054ffa34e4aba1e425642"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/lockfree.git",
+   "mirror_path": "mirror/git/github.com/boostorg/lockfree.git",
+   "present": true,
+   "consumed_commits": [
+    "fbea9be049f101e35ad12e169ce84d79a8664ba2"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/log.git",
+   "mirror_path": "mirror/git/github.com/boostorg/log.git",
+   "present": true,
+   "consumed_commits": [
+    "959a97c38b436ddfe6afe2906d255a6b32458fc9"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/logic.git",
+   "mirror_path": "mirror/git/github.com/boostorg/logic.git",
+   "present": true,
+   "consumed_commits": [
+    "832731f5ab57a9b9cb03847fcd31b001fa9314bc"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/math.git",
+   "mirror_path": "mirror/git/github.com/boostorg/math.git",
+   "present": true,
+   "consumed_commits": [
+    "d75659faf9d941492987957e0e34a3ff98d1dc05"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/metaparse.git",
+   "mirror_path": "mirror/git/github.com/boostorg/metaparse.git",
+   "present": true,
+   "consumed_commits": [
+    "e0350c0bfe92a257bf0be2083f2a003f237b5dd8"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/move.git",
+   "mirror_path": "mirror/git/github.com/boostorg/move.git",
+   "present": true,
+   "consumed_commits": [
+    "0304ee7581dda870dbb66c6bd0556a58a1002ca4"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/mp11.git",
+   "mirror_path": "mirror/git/github.com/boostorg/mp11.git",
+   "present": true,
+   "consumed_commits": [
+    "f64bc319c0c37fdd02c2a736be77bdf682cab6d2"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/mpi.git",
+   "mirror_path": "mirror/git/github.com/boostorg/mpi.git",
+   "present": true,
+   "consumed_commits": [
+    "c6769cae3bc7f0bf1ad922dad9a7db2e77a669b1"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/mpl.git",
+   "mirror_path": "mirror/git/github.com/boostorg/mpl.git",
+   "present": true,
+   "consumed_commits": [
+    "e01a10925db285b31d0d73929178edd9279142df"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/msm.git",
+   "mirror_path": "mirror/git/github.com/boostorg/msm.git",
+   "present": true,
+   "consumed_commits": [
+    "2286d12deb237e8325c00fcb28c666190daca2ac"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/multi_array.git",
+   "mirror_path": "mirror/git/github.com/boostorg/multi_array.git",
+   "present": true,
+   "consumed_commits": [
+    "74cbc0f659b565404f9a7edcd2438a074f1db902"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/multi_index.git",
+   "mirror_path": "mirror/git/github.com/boostorg/multi_index.git",
+   "present": true,
+   "consumed_commits": [
+    "27dd13278095357aadfe4a3a5455f587cac87648"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/multiprecision.git",
+   "mirror_path": "mirror/git/github.com/boostorg/multiprecision.git",
+   "present": true,
+   "consumed_commits": [
+    "08fc0ae371a84101445f6a64cfd5cd3f6c4b0ca4"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/numeric_conversion.git",
+   "mirror_path": "mirror/git/github.com/boostorg/numeric_conversion.git",
+   "present": true,
+   "consumed_commits": [
+    "de922921408bc7116a3c7c67b2fcfbe3e3214f3b"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/odeint.git",
+   "mirror_path": "mirror/git/github.com/boostorg/odeint.git",
+   "present": true,
+   "consumed_commits": [
+    "db8f91a51da630957d6bfa1ff87be760b0be97a6"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/optional.git",
+   "mirror_path": "mirror/git/github.com/boostorg/optional.git",
+   "present": true,
+   "consumed_commits": [
+    "a192204b41bd9744d85f202849f860b66fd1c2bc"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/outcome.git",
+   "mirror_path": "mirror/git/github.com/boostorg/outcome.git",
+   "present": true,
+   "consumed_commits": [
+    "3b77d322c127ddec13faedb98c21c40742f97893"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/parameter.git",
+   "mirror_path": "mirror/git/github.com/boostorg/parameter.git",
+   "present": true,
+   "consumed_commits": [
+    "ba78e65f931b9e57820950215326785ac6794b71"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/parameter_python.git",
+   "mirror_path": "mirror/git/github.com/boostorg/parameter_python.git",
+   "present": true,
+   "consumed_commits": [
+    "787d8d38d9fd49c34a757b20361f8042dd5ac820"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/phoenix.git",
+   "mirror_path": "mirror/git/github.com/boostorg/phoenix.git",
+   "present": true,
+   "consumed_commits": [
+    "99fba04b40cbd2a191382b58402472662e2ad6e1"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/poly_collection.git",
+   "mirror_path": "mirror/git/github.com/boostorg/poly_collection.git",
+   "present": true,
+   "consumed_commits": [
+    "1f5655001db14a101af61d3e9e4af5444a646bc9"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/polygon.git",
+   "mirror_path": "mirror/git/github.com/boostorg/polygon.git",
+   "present": true,
+   "consumed_commits": [
+    "97a024b34545218ed1039a9d2fd1604facda5880"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/pool.git",
+   "mirror_path": "mirror/git/github.com/boostorg/pool.git",
+   "present": true,
+   "consumed_commits": [
+    "8edafbec99cefa00b84b1c95e5b3cbbf9a6a5498"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/predef.git",
+   "mirror_path": "mirror/git/github.com/boostorg/predef.git",
+   "present": true,
+   "consumed_commits": [
+    "fe62325d9fe171028a1beb61082a72972a3e93b0"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/preprocessor.git",
+   "mirror_path": "mirror/git/github.com/boostorg/preprocessor.git",
+   "present": true,
+   "consumed_commits": [
+    "ffb27a1d5661cb4828b7569f65000a30a1b2c163"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/process.git",
+   "mirror_path": "mirror/git/github.com/boostorg/process.git",
+   "present": true,
+   "consumed_commits": [
+    "0a554c92b589428d21e6e263350a1c0c866331ac"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/program_options.git",
+   "mirror_path": "mirror/git/github.com/boostorg/program_options.git",
+   "present": true,
+   "consumed_commits": [
+    "bc0c90a70f0435ee4ce65b97a68d864a7d627e35"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/property_map.git",
+   "mirror_path": "mirror/git/github.com/boostorg/property_map.git",
+   "present": true,
+   "consumed_commits": [
+    "df0bbaafad699c7ce1b0f593cdde9b3e3da3b5b1"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/property_tree.git",
+   "mirror_path": "mirror/git/github.com/boostorg/property_tree.git",
+   "present": true,
+   "consumed_commits": [
+    "bdfe275d172ac30bc5e89a6375a5a64dea20b3c0"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/proto.git",
+   "mirror_path": "mirror/git/github.com/boostorg/proto.git",
+   "present": true,
+   "consumed_commits": [
+    "c45e6c41322e222802afa035e89b71cead939388"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/ptr_container.git",
+   "mirror_path": "mirror/git/github.com/boostorg/ptr_container.git",
+   "present": true,
+   "consumed_commits": [
+    "c7b6a7ee5b41d378c4c95d6f6edb25c98dfffed7"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/python.git",
+   "mirror_path": "mirror/git/github.com/boostorg/python.git",
+   "present": true,
+   "consumed_commits": [
+    "102acf1d34ff91e67fe9aae401edc6edd68be89e"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/quickbook.git",
+   "mirror_path": "mirror/git/github.com/boostorg/quickbook.git",
+   "present": true,
+   "consumed_commits": [
+    "944f760cc2decfe745540f019cad078a57a27337"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/qvm.git",
+   "mirror_path": "mirror/git/github.com/boostorg/qvm.git",
+   "present": true,
+   "consumed_commits": [
+    "3914976fc9fca6aebaceb14820f6ed36e6be94e6"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/random.git",
+   "mirror_path": "mirror/git/github.com/boostorg/random.git",
+   "present": true,
+   "consumed_commits": [
+    "5d9ba8578ac1d78525488077dafb99b536a399d3"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/range.git",
+   "mirror_path": "mirror/git/github.com/boostorg/range.git",
+   "present": true,
+   "consumed_commits": [
+    "77a4dd51242f1ef446acb1a476ae1c760c206b1d"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/ratio.git",
+   "mirror_path": "mirror/git/github.com/boostorg/ratio.git",
+   "present": true,
+   "consumed_commits": [
+    "96888514780dbe8d1729a8248fbafdeda79bcdc4"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/rational.git",
+   "mirror_path": "mirror/git/github.com/boostorg/rational.git",
+   "present": true,
+   "consumed_commits": [
+    "47c1b26964b06a99200769474d58a309267c50f1"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/regex.git",
+   "mirror_path": "mirror/git/github.com/boostorg/regex.git",
+   "present": true,
+   "consumed_commits": [
+    "c21b52d87cd368505f77d6b69bb97ad581e4e7eb"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/safe_numerics.git",
+   "mirror_path": "mirror/git/github.com/boostorg/safe_numerics.git",
+   "present": true,
+   "consumed_commits": [
+    "8ff0f8538c43f67c653fa037f969c66915e37326"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/scope_exit.git",
+   "mirror_path": "mirror/git/github.com/boostorg/scope_exit.git",
+   "present": true,
+   "consumed_commits": [
+    "3a2c1d7da44af2bb4bf47a4dc051998a80d3194f"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/serialization.git",
+   "mirror_path": "mirror/git/github.com/boostorg/serialization.git",
+   "present": true,
+   "consumed_commits": [
+    "f04a8cbe908d577220c1ca1a6a612ae93249ff08"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/signals2.git",
+   "mirror_path": "mirror/git/github.com/boostorg/signals2.git",
+   "present": true,
+   "consumed_commits": [
+    "77df30b97cb2a97adbd1d1e511e2b8b54ab92940"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/smart_ptr.git",
+   "mirror_path": "mirror/git/github.com/boostorg/smart_ptr.git",
+   "present": true,
+   "consumed_commits": [
+    "274ec17836bfbfd85159ef3c358031b31fc3c6ea"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/sort.git",
+   "mirror_path": "mirror/git/github.com/boostorg/sort.git",
+   "present": true,
+   "consumed_commits": [
+    "62dbaee9779b6f3e84c20e66c20861ecc6d98749"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/spirit.git",
+   "mirror_path": "mirror/git/github.com/boostorg/spirit.git",
+   "present": true,
+   "consumed_commits": [
+    "877c778ed960cc2fbef8c845628495b196591334"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/stacktrace.git",
+   "mirror_path": "mirror/git/github.com/boostorg/stacktrace.git",
+   "present": true,
+   "consumed_commits": [
+    "7c7271d9bca2ab6e4abbff2e8ab19cd8027ea7a1"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/statechart.git",
+   "mirror_path": "mirror/git/github.com/boostorg/statechart.git",
+   "present": true,
+   "consumed_commits": [
+    "798d77087ecc144f36f8f5873dd1e9a4f4926344"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/static_assert.git",
+   "mirror_path": "mirror/git/github.com/boostorg/static_assert.git",
+   "present": true,
+   "consumed_commits": [
+    "233ef6bedd1868437a1c7fb7e7f77c6a1b6e3495"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/system.git",
+   "mirror_path": "mirror/git/github.com/boostorg/system.git",
+   "present": true,
+   "consumed_commits": [
+    "455946faacd0552c7222d5ab59dad4289e164211"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/test.git",
+   "mirror_path": "mirror/git/github.com/boostorg/test.git",
+   "present": true,
+   "consumed_commits": [
+    "ef61be4b6db7357c6ae2294f5be55f4089301699"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/thread.git",
+   "mirror_path": "mirror/git/github.com/boostorg/thread.git",
+   "present": true,
+   "consumed_commits": [
+    "042ce47e777cf44b11fe6baba02c3531222117f1"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/throw_exception.git",
+   "mirror_path": "mirror/git/github.com/boostorg/throw_exception.git",
+   "present": true,
+   "consumed_commits": [
+    "43a57d518cf99fc693eebedefcbaa91074674f54"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/timer.git",
+   "mirror_path": "mirror/git/github.com/boostorg/timer.git",
+   "present": true,
+   "consumed_commits": [
+    "7e252144c199b0b620e306d894cea545965cc1fb"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/tokenizer.git",
+   "mirror_path": "mirror/git/github.com/boostorg/tokenizer.git",
+   "present": true,
+   "consumed_commits": [
+    "667a8229bd87f1986a49d844582c396dec408d14"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/tti.git",
+   "mirror_path": "mirror/git/github.com/boostorg/tti.git",
+   "present": true,
+   "consumed_commits": [
+    "d7b8e0ed57162cdebef326386099b57d1467486c"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/tuple.git",
+   "mirror_path": "mirror/git/github.com/boostorg/tuple.git",
+   "present": true,
+   "consumed_commits": [
+    "fb55aa6d4d5e6917f55dbd7aee58afde97879b85"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/type_erasure.git",
+   "mirror_path": "mirror/git/github.com/boostorg/type_erasure.git",
+   "present": true,
+   "consumed_commits": [
+    "46a8945bfbc1b691112500b4e07865e9090b1274"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/type_index.git",
+   "mirror_path": "mirror/git/github.com/boostorg/type_index.git",
+   "present": true,
+   "consumed_commits": [
+    "afd1b6cdc88c516d72a6a2f7a7dd3585f7a8f20c"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/type_traits.git",
+   "mirror_path": "mirror/git/github.com/boostorg/type_traits.git",
+   "present": true,
+   "consumed_commits": [
+    "d91381b8f2f041e139b8e7e689921f5aca0d2574"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/typeof.git",
+   "mirror_path": "mirror/git/github.com/boostorg/typeof.git",
+   "present": true,
+   "consumed_commits": [
+    "e35962f3f07f9eca1efb1e816348bb42794b8a51"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/ublas.git",
+   "mirror_path": "mirror/git/github.com/boostorg/ublas.git",
+   "present": true,
+   "consumed_commits": [
+    "53361d7f42e7d88661c147a2490e10ee32324e48"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/units.git",
+   "mirror_path": "mirror/git/github.com/boostorg/units.git",
+   "present": true,
+   "consumed_commits": [
+    "57389b7374a6f7a4caf87cc44092bb8d0db65ec6"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/unordered.git",
+   "mirror_path": "mirror/git/github.com/boostorg/unordered.git",
+   "present": true,
+   "consumed_commits": [
+    "9abce00f240f4d7b38c335c1f86262e7ea16018d"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/utility.git",
+   "mirror_path": "mirror/git/github.com/boostorg/utility.git",
+   "present": true,
+   "consumed_commits": [
+    "75276a055d3d8f88be1c50dc18ce8ffacc81d458"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/uuid.git",
+   "mirror_path": "mirror/git/github.com/boostorg/uuid.git",
+   "present": true,
+   "consumed_commits": [
+    "ca0185f9f2f1c8d58af8c54ce24579e1c6ebf348"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/variant.git",
+   "mirror_path": "mirror/git/github.com/boostorg/variant.git",
+   "present": true,
+   "consumed_commits": [
+    "f34376e115329a3196dd19101398500423b72a21"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/variant2.git",
+   "mirror_path": "mirror/git/github.com/boostorg/variant2.git",
+   "present": true,
+   "consumed_commits": [
+    "a15364bd8148b147e0ba7d27197a36b33dac63b8"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/vmd.git",
+   "mirror_path": "mirror/git/github.com/boostorg/vmd.git",
+   "present": true,
+   "consumed_commits": [
+    "92524f090343bcb980ebda7ba10bbf5f5f28365b"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/wave.git",
+   "mirror_path": "mirror/git/github.com/boostorg/wave.git",
+   "present": true,
+   "consumed_commits": [
+    "ac64abce4a3492a18aee3450d180c1d8ae5b490d"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/winapi.git",
+   "mirror_path": "mirror/git/github.com/boostorg/winapi.git",
+   "present": true,
+   "consumed_commits": [
+    "65b9c99a6772add56a24272d0b76b611fd92caf4"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/xpressive.git",
+   "mirror_path": "mirror/git/github.com/boostorg/xpressive.git",
+   "present": true,
+   "consumed_commits": [
+    "4d4bc69f8b05e63c744e6f477df6a364affbc603"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/boostorg/yap.git",
+   "mirror_path": "mirror/git/github.com/boostorg/yap.git",
+   "present": true,
+   "consumed_commits": [
+    "f06a3d9361ef41eca27abae13a533b80cf1b7462"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/chriskohlhoff/asio.git",
+   "mirror_path": "mirror/git/github.com/chriskohlhoff/asio.git",
+   "present": true,
+   "consumed_commits": [
+    "230c0d2ae035c5ce1292233fcab03cea0d341264"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/g-truc/glm.git",
+   "mirror_path": "mirror/git/github.com/g-truc/glm.git",
+   "present": true,
+   "consumed_commits": [
+    "33b4a621a697a305bc3a7610d290677b96beb181"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/google/brotli.git",
+   "mirror_path": "mirror/git/github.com/google/brotli.git",
+   "present": true,
+   "consumed_commits": [
+    "a47d7475063eb223c87632eed806c0070e70da29"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/google/googletest.git",
+   "mirror_path": "mirror/git/github.com/google/googletest.git",
+   "present": true,
+   "consumed_commits": [
+    "b796f7d44681514f58a683a3a71ff17c94edb0c1"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/google/gumbo-parser.git",
+   "mirror_path": "mirror/git/github.com/google/gumbo-parser.git",
+   "present": true,
+   "consumed_commits": [
+    "aa91b27b02c0c80c482e24348a457ed7c3c088e0"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/harfbuzz/harfbuzz.git",
+   "mirror_path": "mirror/git/github.com/harfbuzz/harfbuzz.git",
+   "present": true,
+   "consumed_commits": [
+    "894a1f72ee93a1fd8dc1d9218cb3fd8f048be29a"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/hunspell/hunspell.git",
+   "mirror_path": "mirror/git/github.com/hunspell/hunspell.git",
+   "present": true,
+   "consumed_commits": [
+    "8a2fdfe5a6bb1cbafc04b0c8486abcefd17ad903"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/hunspell/hyphen.git",
+   "mirror_path": "mirror/git/github.com/hunspell/hyphen.git",
+   "present": true,
+   "consumed_commits": [
+    "c299444629416f90625a2e56fdfc4efdca131ecc"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/jasenhuang/katana-parser.git",
+   "mirror_path": "mirror/git/github.com/jasenhuang/katana-parser.git",
+   "present": true,
+   "consumed_commits": [
+    "be6df458d4540eee375c513958dcb862a391cdd1"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/kohei-us/mdds.git",
+   "mirror_path": "mirror/git/github.com/kohei-us/mdds.git",
+   "present": true,
+   "consumed_commits": [
+    "0783158939c6ce4b0b1b89e345ab983ccb0f0ad0"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/miloyip/rapidjson.git",
+   "mirror_path": "mirror/git/github.com/miloyip/rapidjson.git",
+   "present": true,
+   "consumed_commits": [
+    "a36110e11874bcf35af854940e0ce910c19a8b49"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/mity/md4c.git",
+   "mirror_path": "mirror/git/github.com/mity/md4c.git",
+   "present": true,
+   "consumed_commits": [
+    "481fbfbdf72daab2912380d62bb5f2187d438408"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/openssl/openssl.git",
+   "mirror_path": "mirror/git/github.com/openssl/openssl.git",
+   "present": true,
+   "consumed_commits": [
+    "36eadf1f84daa965041cce410b4ff32cbda4ef08"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/socketio/socket.io-client-cpp.git",
+   "mirror_path": "mirror/git/github.com/socketio/socket.io-client-cpp.git",
+   "present": true,
+   "consumed_commits": [
+    "da779141a7379cc30c870d48295033bc16a23c66"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/strukturag/libde265.git",
+   "mirror_path": "mirror/git/github.com/strukturag/libde265.git",
+   "present": true,
+   "consumed_commits": [
+    "7ba65889d3d6d8a0d99b5360b028243ba843be3a"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/strukturag/libheif.git",
+   "mirror_path": "mirror/git/github.com/strukturag/libheif.git",
+   "present": true,
+   "consumed_commits": [
+    "bf35e9eb25af8f2b7917996ad9ba849d922f8d15"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/vinniefalco/docca.git",
+   "mirror_path": "mirror/git/github.com/vinniefalco/docca.git",
+   "present": true,
+   "consumed_commits": [
+    "77a24a56c68ebb158f7d605cc3d5546510002c1c"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  },
+  {
+   "url": "https://github.com/zaphoyd/websocketpp.git",
+   "mirror_path": "mirror/git/github.com/zaphoyd/websocketpp.git",
+   "present": true,
+   "consumed_commits": [
+    "56123c87598f8b1dd471be83ca841ceae07f95ba"
+   ],
+   "tag_v10.0.0.176": null,
+   "tag_consumed": null
+  }
+ ],
+ "files": [
+  {
+   "path": "mirror/http/github.com/Kitware/CMake/releases/download/v3.30.0/cmake-3.30.0-linux-x86_64.tar.gz",
+   "sha256": "09846a3858583f38189b59177586adf125a08c15f3cddcaf7d7d7081ac86969f",
+   "bytes": 53633298,
+   "url": "https://github.com/Kitware/CMake/releases/download/v3.30.0/cmake-3.30.0-linux-x86_64.tar.gz"
+  },
+  {
+   "path": "mirror/http/github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/cef/5414/linux_64/cef_binary.7z",
+   "sha256": "dff9aa53c147fd0c6a03f57e17aef10b0cee3fe7c4dc18b3b1a8a7a20bf0a145",
+   "bytes": 92162613,
+   "url": "https://github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/cef/5414/linux_64/cef_binary.7z"
+  },
+  {
+   "path": "mirror/http/github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/python/extract.sh",
+   "sha256": "1eb764fe6c73fd9d372966c038268c8c374d597613e9d4f341f3059dcec21539",
+   "bytes": 1789,
+   "url": "https://github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/python/extract.sh"
+  },
+  {
+   "path": "mirror/http/github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/python/python3.tar.gz",
+   "sha256": "c251fd88959ad83a64711d37d7897d0bf7a3ed272f23b6ef6216e0eed0bf9360",
+   "bytes": 27370464,
+   "url": "https://github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/python/python3.tar.gz"
+  },
+  {
+   "path": "mirror/http/github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/qt/qt_binary_5.9.9_gcc_64.7z",
+   "sha256": "84181f983a5e76c2f8a63f8bf06d5ce27675f543c45febe014514633a1289f0e",
+   "bytes": 33556497,
+   "url": "https://github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/qt/qt_binary_5.9.9_gcc_64.7z"
+  },
+  {
+   "path": "mirror/http/github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/qt/qt_binary_5.9.9_gcc_arm64.7z",
+   "sha256": "83b1d02b86f2137c230a4e8ecc43d23517dbf67dae5fcf7ecf18ca71e6c2c12d",
+   "bytes": 29887509,
+   "url": "https://github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/qt/qt_binary_5.9.9_gcc_arm64.7z"
+  },
+  {
+   "path": "mirror/http/github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/sysroot/ubuntu16-amd64-sysroot.tar.gz",
+   "sha256": "d74cfd1b7afb4e25066b04a9a2a6d42e9d95cf76e61bcd1a51cfd30c18b0c872",
+   "bytes": 250548880,
+   "url": "https://github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/sysroot/ubuntu16-amd64-sysroot.tar.gz"
+  },
+  {
+   "path": "mirror/http/github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/sysroot/ubuntu16-arm64-sysroot.tar.gz",
+   "sha256": "9fea5d2a1796f3cbe5abd9659e6d54d67a0f205bafa620b38c92d8abe98992a0",
+   "bytes": 187326657,
+   "url": "https://github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/sysroot/ubuntu16-arm64-sysroot.tar.gz"
+  },
+  {
+   "path": "mirror/http/onlyoffice.github.io/sdkjs-plugins/v1/plugins-ui.js",
+   "sha256": "4896dd856c75b7efb764447295582a3c0c93769c1f3b3574ac256f6bf33f6f5a",
+   "bytes": 23763,
+   "url": "https://onlyoffice.github.io/sdkjs-plugins/v1/plugins-ui.js"
+  },
+  {
+   "path": "mirror/http/onlyoffice.github.io/sdkjs-plugins/v1/plugins.css",
+   "sha256": "d0fabc8d79c8c4fa677f399df7e433dea1c7f77bf33e0653c530b55367e08abd",
+   "bytes": 16875,
+   "url": "https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css"
+  },
+  {
+   "path": "mirror/http/onlyoffice.github.io/sdkjs-plugins/v1/plugins.js",
+   "sha256": "1bc0bd71eebcb477ceaaee3ab00ed1a10ce7eae117ec68ae8024645c435f524e",
+   "bytes": 15196,
+   "url": "https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js"
+  },
+  {
+   "path": "mirror/http/raw.githubusercontent.com/imagemin/gifsicle-bin/v4.0.1/vendor/linux/x64/gifsicle",
+   "sha256": "cf2d1e1922ab4734f82bae29dd5309af3c61f95a3e9008bbf9e05beeb52961af",
+   "bytes": 734392,
+   "url": "https://raw.githubusercontent.com/imagemin/gifsicle-bin/v4.0.1/vendor/linux/x64/gifsicle"
+  },
+  {
+   "path": "mirror/http/raw.githubusercontent.com/imagemin/jpegtran-bin/v4.0.0/vendor/linux/x64/jpegtran",
+   "sha256": "e16cb94031c4278cbe23d06243c4eadc700060790168f2fc7230da66ebe5f2b8",
+   "bytes": 306001,
+   "url": "https://raw.githubusercontent.com/imagemin/jpegtran-bin/v4.0.0/vendor/linux/x64/jpegtran"
+  },
+  {
+   "path": "mirror/http/raw.githubusercontent.com/imagemin/optipng-bin/v5.1.0/vendor/linux/x64/optipng",
+   "sha256": "12ef97e434641350a92c1ac08d1afa439ea9acd3c5af791fbeddc120c9efdf55",
+   "bytes": 130680,
+   "url": "https://raw.githubusercontent.com/imagemin/optipng-bin/v5.1.0/vendor/linux/x64/optipng"
+  },
+  {
+   "path": "mirror/http/raw.githubusercontent.com/nginx/nginx/master/conf/mime.types",
+   "sha256": "6f95d1d7d75e3c072907d845622a69d23110d1266c16ff122b3109b8b21f3ae9",
+   "bytes": 5349,
+   "url": "https://raw.githubusercontent.com/nginx/nginx/master/conf/mime.types"
+  }
+ ],
+ "image_fonts": [
+  {
+   "path": "mirror/http/downloads.sourceforge.net/corefonts/andale32.exe",
+   "sha256": "0524fe42951adc3a7eb870e32f0920313c71f170c859b5f770d82b4ee111e970",
+   "bytes": 198384,
+   "url": "http://downloads.sourceforge.net/corefonts/andale32.exe"
+  },
+  {
+   "path": "mirror/http/downloads.sourceforge.net/corefonts/arial32.exe",
+   "sha256": "85297a4d146e9c87ac6f74822734bdee5f4b2a722d7eaa584b7f2cbf76f478f6",
+   "bytes": 554208,
+   "url": "http://downloads.sourceforge.net/corefonts/arial32.exe"
+  },
+  {
+   "path": "mirror/http/downloads.sourceforge.net/corefonts/arialb32.exe",
+   "sha256": "a425f0ffb6a1a5ede5b979ed6177f4f4f4fdef6ae7c302a7b7720ef332fec0a8",
+   "bytes": 168176,
+   "url": "http://downloads.sourceforge.net/corefonts/arialb32.exe"
+  },
+  {
+   "path": "mirror/http/downloads.sourceforge.net/corefonts/comic32.exe",
+   "sha256": "9c6df3feefde26d4e41d4a4fe5db2a89f9123a772594d7f59afd062625cd204e",
+   "bytes": 246008,
+   "url": "http://downloads.sourceforge.net/corefonts/comic32.exe"
+  },
+  {
+   "path": "mirror/http/downloads.sourceforge.net/corefonts/courie32.exe",
+   "sha256": "bb511d861655dde879ae552eb86b134d6fae67cb58502e6ff73ec5d9151f3384",
+   "bytes": 646368,
+   "url": "http://downloads.sourceforge.net/corefonts/courie32.exe"
+  },
+  {
+   "path": "mirror/http/downloads.sourceforge.net/corefonts/georgi32.exe",
+   "sha256": "2c2c7dcda6606ea5cf08918fb7cd3f3359e9e84338dc690013f20cd42e930301",
+   "bytes": 392440,
+   "url": "http://downloads.sourceforge.net/corefonts/georgi32.exe"
+  },
+  {
+   "path": "mirror/http/downloads.sourceforge.net/corefonts/impact32.exe",
+   "sha256": "6061ef3b7401d9642f5dfdb5f2b376aa14663f6275e60a51207ad4facf2fccfb",
+   "bytes": 173288,
+   "url": "http://downloads.sourceforge.net/corefonts/impact32.exe"
+  },
+  {
+   "path": "mirror/http/downloads.sourceforge.net/corefonts/times32.exe",
+   "sha256": "db56595ec6ef5d3de5c24994f001f03b2a13e37cee27bc25c58f6f43e8f807ab",
+   "bytes": 661728,
+   "url": "http://downloads.sourceforge.net/corefonts/times32.exe"
+  },
+  {
+   "path": "mirror/http/downloads.sourceforge.net/corefonts/trebuc32.exe",
+   "sha256": "5a690d9bb8510be1b8b4fe49f1f2319651fe51bbe54775ddddd8ef0bd07fdac9",
+   "bytes": 357200,
+   "url": "http://downloads.sourceforge.net/corefonts/trebuc32.exe"
+  },
+  {
+   "path": "mirror/http/downloads.sourceforge.net/corefonts/verdan32.exe",
+   "sha256": "c1cb61255e363166794e47664e2f21af8e3a26cb6346eb8d2ae2fa85dd5aad96",
+   "bytes": 351992,
+   "url": "http://downloads.sourceforge.net/corefonts/verdan32.exe"
+  },
+  {
+   "path": "mirror/http/downloads.sourceforge.net/corefonts/webdin32.exe",
+   "sha256": "64595b5abc1080fba8610c5c34fab5863408e806aafe84653ca8575bed17d75a",
+   "bytes": 185072,
+   "url": "http://downloads.sourceforge.net/corefonts/webdin32.exe"
+  }
+ ],
+ "tool_inputs": [
+  {
+   "path": "mirror/http/nodejs.org/dist/v22.23.4/node-v22.23.4-linux-x64.tar.xz",
+   "sha256": "1805bcd35e6815559bd2eb97db438d3fdb0eb3a5e6a977b7c1badca76337e9ce",
+   "bytes": 31029996
+  },
+  {
+   "path": "mirror/http/nodejs.org/dist/v22.23.4/SHASUMS256.txt",
+   "sha256": "c90c3f1478fda8308b22cc1a1b0dc536169196444e67ee8b5c582fd351d02bce",
+   "bytes": 3981
+  },
+  {
+   "path": "mirror/http/nodejs.org/dist/v22.23.4/SHASUMS256.txt.sig",
+   "sha256": "062fe0561f4e93d54dcb2f826a50a4ff26e2563f88b254dd8a3324809abffcd9",
+   "bytes": 119
+  },
+  {
+   "path": "mirror/http/github.com/yao-pkg/pkg-fetch/releases/download/v3.6/node-v22.23.4-linux-x64",
+   "sha256": "4880a67281fe58ffe11c7c2606efb10654337e27e437e78345c6393326891e00",
+   "bytes": 74205712
+  },
+  {
+   "path": "mirror/http/github.com/yao-pkg/pkg-fetch/releases/download/v3.6/node-v22.23.4-linuxstatic-x64",
+   "sha256": "23aa7dd74e3262bcc6400b33037356d8e2422a69781042cf245f7fdde9be57f5",
+   "bytes": 70013640
+  }
+ ],
+ "apt_files": [
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/dists/noble-backports/InRelease",
+   "sha256": "d4f000acabfd246dd2a7d3e30ba786a006108858c914715b942398d69f58d568",
+   "bytes": 126173,
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble-backports/InRelease"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/dists/noble-backports/main/binary-amd64/by-hash/SHA256/6f3b7755140b30969e97cd282a1752d14604c5e56fe439c1886d27172e71a776",
+   "sha256": "6f3b7755140b30969e97cd282a1752d14604c5e56fe439c1886d27172e71a776",
+   "bytes": 49046,
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble-backports/main/binary-amd64/by-hash/SHA256/6f3b7755140b30969e97cd282a1752d14604c5e56fe439c1886d27172e71a776"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/dists/noble-backports/multiverse/binary-amd64/by-hash/SHA256/27d17f6328eacd44b73a2677da7e754cca1ebec5681e87807895f480f4437662",
+   "sha256": "27d17f6328eacd44b73a2677da7e754cca1ebec5681e87807895f480f4437662",
+   "bytes": 669,
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble-backports/multiverse/binary-amd64/by-hash/SHA256/27d17f6328eacd44b73a2677da7e754cca1ebec5681e87807895f480f4437662"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/dists/noble-backports/universe/binary-amd64/by-hash/SHA256/36aa767035faeabc0adc36167e978a7379a4233824d3a6cea2828cce8b97d6c6",
+   "sha256": "36aa767035faeabc0adc36167e978a7379a4233824d3a6cea2828cce8b97d6c6",
+   "bytes": 35958,
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble-backports/universe/binary-amd64/by-hash/SHA256/36aa767035faeabc0adc36167e978a7379a4233824d3a6cea2828cce8b97d6c6"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease",
+   "sha256": "4fcba3fb02086679f7e86677e320b92e0d076a8c02e30dc0abbbe06b67640db7",
+   "bytes": 126125,
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/dists/noble-updates/main/binary-amd64/by-hash/SHA256/37fb0ed74379ca79f4f438e5e535ce31439facdac4c541efd63028435effaaac",
+   "sha256": "37fb0ed74379ca79f4f438e5e535ce31439facdac4c541efd63028435effaaac",
+   "bytes": 1732813,
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble-updates/main/binary-amd64/by-hash/SHA256/37fb0ed74379ca79f4f438e5e535ce31439facdac4c541efd63028435effaaac"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/dists/noble-updates/multiverse/binary-amd64/by-hash/SHA256/91c4037617da232162abc8fa5709fdaa985d30082949dcf042d9ca452d4aa18b",
+   "sha256": "91c4037617da232162abc8fa5709fdaa985d30082949dcf042d9ca452d4aa18b",
+   "bytes": 61740,
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble-updates/multiverse/binary-amd64/by-hash/SHA256/91c4037617da232162abc8fa5709fdaa985d30082949dcf042d9ca452d4aa18b"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/dists/noble-updates/restricted/binary-amd64/by-hash/SHA256/b499ee4317cb38a7e84c07c853bf75ccb9433fd3de60bb99a560ea193ce2eeb9",
+   "sha256": "b499ee4317cb38a7e84c07c853bf75ccb9433fd3de60bb99a560ea193ce2eeb9",
+   "bytes": 2230731,
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble-updates/restricted/binary-amd64/by-hash/SHA256/b499ee4317cb38a7e84c07c853bf75ccb9433fd3de60bb99a560ea193ce2eeb9"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/dists/noble-updates/universe/binary-amd64/by-hash/SHA256/fdb10d81a711f9d19cc05e0609b8c37ab58978ed61b56312b33310c59ca23bfa",
+   "sha256": "fdb10d81a711f9d19cc05e0609b8c37ab58978ed61b56312b33310c59ca23bfa",
+   "bytes": 2170610,
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble-updates/universe/binary-amd64/by-hash/SHA256/fdb10d81a711f9d19cc05e0609b8c37ab58978ed61b56312b33310c59ca23bfa"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/dists/noble/InRelease",
+   "sha256": "cdb2f31d809f589719a53c6ad15f255b27569c4059542ada282aaa21b8e164b0",
+   "bytes": 255850,
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble/InRelease"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/dists/noble/main/binary-amd64/by-hash/SHA256/e0d7e4cbb09d2aa7f9e104a1488817417bc9d85f3e5d9a21156a52ec641ae531",
+   "sha256": "e0d7e4cbb09d2aa7f9e104a1488817417bc9d85f3e5d9a21156a52ec641ae531",
+   "bytes": 1808488,
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble/main/binary-amd64/by-hash/SHA256/e0d7e4cbb09d2aa7f9e104a1488817417bc9d85f3e5d9a21156a52ec641ae531"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/dists/noble/multiverse/binary-amd64/by-hash/SHA256/99bab1045220397046fd47364f74b755c8ec70aea1fadd01ad089479bc269224",
+   "sha256": "99bab1045220397046fd47364f74b755c8ec70aea1fadd01ad089479bc269224",
+   "bytes": 331072,
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble/multiverse/binary-amd64/by-hash/SHA256/99bab1045220397046fd47364f74b755c8ec70aea1fadd01ad089479bc269224"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/dists/noble/restricted/binary-amd64/by-hash/SHA256/660e97348358bdf16efa4fad4c5e8b1b11b33f29dfa41af639c33f27fc2ac46b",
+   "sha256": "660e97348358bdf16efa4fad4c5e8b1b11b33f29dfa41af639c33f27fc2ac46b",
+   "bytes": 117405,
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble/restricted/binary-amd64/by-hash/SHA256/660e97348358bdf16efa4fad4c5e8b1b11b33f29dfa41af639c33f27fc2ac46b"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/dists/noble/universe/binary-amd64/by-hash/SHA256/ce57756edcce0a5f7993ceb89057e1510148e04e3b85a066d780e4bc00485c8a",
+   "sha256": "ce57756edcce0a5f7993ceb89057e1510148e04e3b85a066d780e4bc00485c8a",
+   "bytes": 19315644,
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble/universe/binary-amd64/by-hash/SHA256/ce57756edcce0a5f7993ceb89057e1510148e04e3b85a066d780e4bc00485c8a"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.137ubuntu1_all.deb",
+   "sha256": "542aff2395eb912a56833e11a78076342779689d8fede7adcf08d1d6b0d0cd8b",
+   "bytes": 100872,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.137ubuntu1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/a/apparmor/libapparmor1_4.0.1really4.0.1-0ubuntu0.24.04.9_amd64.deb",
+   "sha256": "75b570d7517e24c3693c4503b4691ac1fd82934d93faa91460309f22104c5617",
+   "bytes": 51476,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/a/apparmor/libapparmor1_4.0.1really4.0.1-0ubuntu0.24.04.9_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/a/argon2/libargon2-1_0%7e20190702%2bdfsg-4build1_amd64.deb",
+   "sha256": "e2c50cb5c50ca598585397f4d4ce43e6f0b5e3ddc212c23b30bdb34ca4a61f66",
+   "bytes": 20824,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/a/argon2/libargon2-1_0%7e20190702%2bdfsg-4build1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/b/brotli/libbrotli1_1.1.0-2build2_amd64.deb",
+   "sha256": "74492419b8fda803774b8c9acef6afc5d2f9ff31782635aae212906adae7b277",
+   "bytes": 330730,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/libbrotli1_1.1.0-2build2_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20260816ubuntu0.24.04.1_all.deb",
+   "sha256": "8a0a754aaafed72cc8efb8c1731808133284a84fbfc76a4fcc73fce9e01b4187",
+   "bytes": 138884,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20260816ubuntu0.24.04.1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/c/chardet/python3-chardet_5.2.0%2bdfsg-1_all.deb",
+   "sha256": "042ec127434ad634a1f312514680b8d0de7bd1e9733b255d93170a6bb843a043",
+   "bytes": 116904,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/c/chardet/python3-chardet_5.2.0%2bdfsg-1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/c/configobj/python3-configobj_5.0.8-3_all.deb",
+   "sha256": "6495d7f7441b9fbcaf5f81889a1b882e5860a9573ea86cc0dbf17d1c5d5c67b0",
+   "bytes": 33844,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/c/configobj/python3-configobj_5.0.8-3_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/c/cron/cron-daemon-common_3.0pl1-184ubuntu2_all.deb",
+   "sha256": "289604310fb1e92b9dae924161f94194533af1fccef3b156f970e5365848ff34",
+   "bytes": 13578,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/c/cron/cron-daemon-common_3.0pl1-184ubuntu2_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/c/cron/cron_3.0pl1-184ubuntu2_amd64.deb",
+   "sha256": "5a257b6b3b05d290964f68868db8127cca7eeef64c30dc9586f46cd4f68f1b90",
+   "bytes": 85350,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/c/cron/cron_3.0pl1-184ubuntu2_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/c/cryptsetup/libcryptsetup12_2.7.0-1ubuntu4.2_amd64.deb",
+   "sha256": "f6f6a7f35104da711997b52c92ab91ce1f47dd039d276d5beb797d713447c9f2",
+   "bytes": 266122,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/c/cryptsetup/libcryptsetup12_2.7.0-1ubuntu4.2_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_8.5.0-2ubuntu10.16_amd64.deb",
+   "sha256": "3c5ca6af64370cfb0fac85876d8025563005cbd399fcaf7e34bbde9051058ae0",
+   "bytes": 226386,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_8.5.0-2ubuntu10.16_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/c/curl/libcurl4t64_8.5.0-2ubuntu10.16_amd64.deb",
+   "sha256": "8196381b41f0078083a2a52b43f7e7ca9b0b79e5325451bf3948e4af7693cd8d",
+   "bytes": 344412,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/c/curl/libcurl4t64_8.5.0-2ubuntu10.16_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.28%2bdfsg1-5ubuntu3.1_amd64.deb",
+   "sha256": "eda097f98dcb3a08b9ce157d6191d140e4885c1cba47b683c94b8ca45e88f458",
+   "bytes": 53194,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.28%2bdfsg1-5ubuntu3.1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/libsasl2-modules-db_2.1.28%2bdfsg1-5ubuntu3.1_amd64.deb",
+   "sha256": "1f13548b1774cd9c70c50b8c3267204a101334a4d2f979338896ba5a4c6f81b8",
+   "bytes": 20354,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/libsasl2-modules-db_2.1.28%2bdfsg1-5ubuntu3.1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/d/dbus-python/python3-dbus_1.3.2-5build3_amd64.deb",
+   "sha256": "45c94c9c4eda925a285dff3c1da01bd93b1467c8a83b10d764398ea8a8306419",
+   "bytes": 100066,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/d/dbus-python/python3-dbus_1.3.2-5build3_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/d/dbus/libdbus-1-3_1.14.10-4ubuntu4.1_amd64.deb",
+   "sha256": "5d630480f04b4b442300ce847a3fa705ea4d14d80ba6de91f99b51a4e4953b08",
+   "bytes": 209734,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/d/dbus/libdbus-1-3_1.14.10-4ubuntu4.1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/d/debconf/python3-debconf_1.5.86ubuntu1_all.deb",
+   "sha256": "88bca2b9ace3465bcedf4e3cc53242c0ffcd6663bba3dce18666192a15b51584",
+   "bytes": 4158,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/d/debconf/python3-debconf_1.5.86ubuntu1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/d/distro-info-data/distro-info-data_2026.10.12-0ubuntu0.24.04.1_all.deb",
+   "sha256": "67404a569b4c1faa333f30424fe6bcc01fcf39297014efd720b47ab7a8b03154",
+   "bytes": 7836,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/d/distro-info-data/distro-info-data_2026.10.12-0ubuntu0.24.04.1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/d/distro-info/distro-info_1.7build1_amd64.deb",
+   "sha256": "e93fb6f8e178de630c64abe15982d1695f6dadbd6b36617dc08cbda1b72b223c",
+   "bytes": 19874,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/d/distro-info/distro-info_1.7build1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/d/distro-info/python3-distro-info_1.7build1_all.deb",
+   "sha256": "41075b12af4a3f0acf8673dbb3224b2d989ae1a125201ad217a70db818c9eff5",
+   "bytes": 7076,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/d/distro-info/python3-distro-info_1.7build1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/e/elfutils/libelf1t64_0.190-1.1ubuntu0.1_amd64.deb",
+   "sha256": "b4aee123a37472d213647594b4f7d4a0d13615b0ca2a6fd33926b768d6b232c2",
+   "bytes": 57810,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/e/elfutils/libelf1t64_0.190-1.1ubuntu0.1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/e/expat/libexpat1_2.6.1-2ubuntu0.6_amd64.deb",
+   "sha256": "494b8e672f722130c6bca6a7bc4cc31a43ca891a31d60d868bfdd699a3c20b13",
+   "bytes": 98940,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/e/expat/libexpat1_2.6.1-2ubuntu0.6_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/f/freetype/libfreetype6_2.13.2%2bdfsg-1ubuntu0.2_amd64.deb",
+   "sha256": "8c6d3bac5a6197fa2f48b2d56f04f3ffecaa7082eeab91b0939f97a40adc88a6",
+   "bytes": 402610,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/libfreetype6_2.13.2%2bdfsg-1ubuntu0.2_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/libglib2.0-0t64_2.80.0-6ubuntu3.10_amd64.deb",
+   "sha256": "ff1b650f655b36dfe202fdbae6bb02b363c7257b6dd23e4f95ab61f716190df3",
+   "bytes": 1547558,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/libglib2.0-0t64_2.80.0-6ubuntu3.10_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/g/glibc/locales_2.39-0ubuntu8.9_all.deb",
+   "sha256": "f8310ef4ba442845cf5d44a5ce3d5d7accb659bae96b3a0999002132209cd367",
+   "bytes": 4231704,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/locales_2.39-0ubuntu8.9_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/dirmngr_2.4.4-2ubuntu17.6_amd64.deb",
+   "sha256": "3c80161cf0918a3b94b78274bf4c63fafe76f15cc8060898527e0757b1df98fd",
+   "bytes": 323226,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/dirmngr_2.4.4-2ubuntu17.6_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg-utils_2.4.4-2ubuntu17.6_amd64.deb",
+   "sha256": "d27240259f74be5ec4c07ec505d087a3d6a4a66eedef479eb067d8f364263a12",
+   "bytes": 109198,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg-utils_2.4.4-2ubuntu17.6_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg_2.4.4-2ubuntu17.6_all.deb",
+   "sha256": "d278c81e407d51dae2b7df30adc08ecd6a0acde5884fc5ba2d1ef107f0e8ab0b",
+   "bytes": 358890,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg_2.4.4-2ubuntu17.6_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gpg-agent_2.4.4-2ubuntu17.6_amd64.deb",
+   "sha256": "7b6778c1d297a4d4e889005917a0b9996a24d704e2e79d52be65b5d1f6b651ce",
+   "bytes": 227154,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gpg-agent_2.4.4-2ubuntu17.6_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gpg_2.4.4-2ubuntu17.6_amd64.deb",
+   "sha256": "34a775d73a2fe9b6e9205668e39954fe0c1e5c046b1a30c307c7d1e6e22cd1a7",
+   "bytes": 565004,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gpg_2.4.4-2ubuntu17.6_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gpgconf_2.4.4-2ubuntu17.6_amd64.deb",
+   "sha256": "59d35df3b5d7e6dd8235c39c56f8008d1380275765d1a10343e5b9be185e2b7a",
+   "bytes": 103894,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gpgconf_2.4.4-2ubuntu17.6_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gpgsm_2.4.4-2ubuntu17.6_amd64.deb",
+   "sha256": "c19746c589c9cb7fa15de8a21790fef0a0b061c3e2758823536d3ac0973ca51a",
+   "bytes": 231628,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gpgsm_2.4.4-2ubuntu17.6_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/keyboxd_2.4.4-2ubuntu17.6_amd64.deb",
+   "sha256": "1bb5f40735b55a17abfb587607816724771fb38fd123b083b7d24bc606c2ecda",
+   "bytes": 78268,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/keyboxd_2.4.4-2ubuntu17.6_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/i/iproute2/iproute2_6.1.0-1ubuntu6.4_amd64.deb",
+   "sha256": "f6c91ec6dba02f8965c88f901205c7db72bc8bf38ef1fdfaaee51030dfa145ea",
+   "bytes": 1119922,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/i/iproute2/iproute2_6.1.0-1ubuntu6.4_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/i/iptables/libxtables12_1.8.10-3ubuntu2_amd64.deb",
+   "sha256": "c94063499d1b0b336f39607107efb7de95d52a5d4e7e6a9368a5f7308f05b714",
+   "bytes": 35704,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/i/iptables/libxtables12_1.8.10-3ubuntu2_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/j/json-c/libjson-c5_0.17-1build1_amd64.deb",
+   "sha256": "3ac608d78e9e981e14ba7ceb141a46e3dd3ae8d6dbb3a7ecafd2698fe9930584",
+   "bytes": 35340,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/j/json-c/libjson-c5_0.17-1build1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/k/keyutils/libkeyutils1_1.6.3-3build1_amd64.deb",
+   "sha256": "0679f198b0128179e46cdf956fb2022c23c758664c00bc8efa0382d509683a8a",
+   "bytes": 9490,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/k/keyutils/libkeyutils1_1.6.3-3build1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/k/kmod/libkmod2_31%2b20240202-2ubuntu7.2_amd64.deb",
+   "sha256": "a9cbdc424bc0a5c8af3d6445488a48de76df5ff4d76b7dab8aaf88f712358bbc",
+   "bytes": 51830,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/k/kmod/libkmod2_31%2b20240202-2ubuntu7.2_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/k/krb5/libgssapi-krb5-2_1.20.1-6ubuntu2.10_amd64.deb",
+   "sha256": "0d4a0187bcdbbe3e6a10bfa574100087d12052d0d0ef28614fd6210021c587b2",
+   "bytes": 142830,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/libgssapi-krb5-2_1.20.1-6ubuntu2.10_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/k/krb5/libk5crypto3_1.20.1-6ubuntu2.10_amd64.deb",
+   "sha256": "273f7cc95a68d927d7f71c3e78b7717a16a8d86e646a206bae7bf797150ae9db",
+   "bytes": 81944,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/libk5crypto3_1.20.1-6ubuntu2.10_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/k/krb5/libkrb5-3_1.20.1-6ubuntu2.10_amd64.deb",
+   "sha256": "60b48c5a3233f1d8caba30d6573edc8e131911ab6d63adcd664f7cbe62708362",
+   "bytes": 347568,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/libkrb5-3_1.20.1-6ubuntu2.10_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/k/krb5/libkrb5support0_1.20.1-6ubuntu2.10_amd64.deb",
+   "sha256": "9224ede3246a82a845ea97652ecfae57f88e8d8f520d8a186f9157167574fb34",
+   "bytes": 34942,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/libkrb5support0_1.20.1-6ubuntu2.10_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/l/logrotate/logrotate_3.21.0-2build1_amd64.deb",
+   "sha256": "e609ad80a9cec135b404a84f99d9d87bc304800eb212702444a985527edba70c",
+   "bytes": 52212,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/l/logrotate/logrotate_3.21.0-2build1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/l/lsb-release-minimal/lsb-release_12.0-2_all.deb",
+   "sha256": "0ae566092f2d6f3000ce25a7a68497a97b637abf8dc25cbdf961c8ee66e562a7",
+   "bytes": 6564,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/l/lsb-release-minimal/lsb-release_12.0-2_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/l/lvm2/libdevmapper1.02.1_1.02.185-3ubuntu3.2_amd64.deb",
+   "sha256": "0d43a02b9030a50edbc49c9580f88f01eef2b043baad1c6200672c39643c0efe",
+   "bytes": 139194,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/l/lvm2/libdevmapper1.02.1_1.02.185-3ubuntu3.2_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/libb/libbpf/libbpf1_1.3.0-2build2_amd64.deb",
+   "sha256": "5654cbb145c2b299472cd208dd06c7dc09bf06cad4c4663fc42a865a51a0d96f",
+   "bytes": 165734,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/libb/libbpf/libbpf1_1.3.0-2build2_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd0_0.12.1-1build1.1_amd64.deb",
+   "sha256": "f3857b0863ac5cfd4263e9bf6cfb1d4be88d5321e4070d5bc2b62b0949e6c86f",
+   "bytes": 41238,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd0_0.12.1-1build1.1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2-bin_2.66-5ubuntu2.4_amd64.deb",
+   "sha256": "a8c875e1711a7a101e995814e6500c826cb658551660ef967ec15fbda79a3997",
+   "bytes": 34134,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2-bin_2.66-5ubuntu2.4_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/libf/libfontenc/libfontenc1_1.1.8-1build1_amd64.deb",
+   "sha256": "0c5d57211cac9659e7f4c856f5e1922c4a522fe8bcf5776e9707b2811f965702",
+   "bytes": 13996,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/libf/libfontenc/libfontenc1_1.1.8-1build1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba8_1.6.6-1build1_amd64.deb",
+   "sha256": "7b0e1f2c2c5ee7b3ed1c1558c6338c6cdd77d27280020abc3e1f3159cf564106",
+   "bytes": 121958,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba8_1.6.6-1build1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/libm/libmnl/libmnl0_1.0.5-2build1_amd64.deb",
+   "sha256": "5170658bf0eaf54a8c7d53061ca6b47a6cf33a83543a75fa521de7046cb7197a",
+   "bytes": 12272,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/libm/libmnl/libmnl0_1.0.5-2build1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/libm/libmspack/libmspack0t64_0.11-1.1build1_amd64.deb",
+   "sha256": "a84ab4c5188c5a73ad5b59d29ca8bc7bd3cc32e27544437788416c0f21190cfd",
+   "bytes": 39970,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/libm/libmspack/libmspack0t64_0.11-1.1build1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/libp/libpng1.6/libpng16-16t64_1.6.43-5ubuntu0.7_amd64.deb",
+   "sha256": "863d6abb089b2820ceba98e6b18f06eaacc55f9b05827001e7b4021a9a7b246c",
+   "bytes": 188998,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/libp/libpng1.6/libpng16-16t64_1.6.43-5ubuntu0.7_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl5t64_0.21.2-1.1build1_amd64.deb",
+   "sha256": "a6c85d1303ae90b6a3209d73c4f047f82c27cdc963c48adfd95dd7abca64f039",
+   "bytes": 57072,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl5t64_0.21.2-1.1build1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh-4_0.10.6-2ubuntu0.5_amd64.deb",
+   "sha256": "2448ce5f99e49721d12f8b227f2472dd08ed7a78184dd819fd03a42693024a16",
+   "bytes": 191284,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh-4_0.10.6-2ubuntu0.5_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/liby/libyaml/libyaml-0-2_0.2.5-1build1_amd64.deb",
+   "sha256": "f5271b120d936dcc7ddf17b9e718df41d55386a6075555d0c634925eaef0b2ac",
+   "bytes": 51492,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/liby/libyaml/libyaml-0-2_0.2.5-1build1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/zstd_1.5.5%2bdfsg2-2build1.1_amd64.deb",
+   "sha256": "d7667f83e3a2caeaaecaca464d542ee6ccf537259a479622796c84afc96d6032",
+   "bytes": 644020,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/zstd_1.5.5%2bdfsg2-2build1.1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/m/media-types/media-types_10.1.0_all.deb",
+   "sha256": "31bfb7eec55ab6d34a50ba995150e1498d4cb897714085d8025e330d3b529747",
+   "bytes": 27474,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/m/media-types/media-types_10.1.0_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/n/netbase/netbase_6.4_all.deb",
+   "sha256": "8cdbc9c3dca01e660759bf9d840f72e45ac72faf5d19ca1faecacaf6a60c1a87",
+   "bytes": 13112,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/n/netbase/netbase_6.4_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/n/netcat-openbsd/netcat-openbsd_1.226-1ubuntu2_amd64.deb",
+   "sha256": "b2b837c2f9939aeda64ddb410c47c5ceee3034cf2157939ed7efdee51961aac4",
+   "bytes": 44292,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/n/netcat-openbsd/netcat-openbsd_1.226-1ubuntu2_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/libnghttp2-14_1.59.0-1ubuntu0.4_amd64.deb",
+   "sha256": "73adcbb9df32cd7c9d46b1c7598bbbbcf249be705d62d966694cfc9976a15dfe",
+   "bytes": 74590,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/libnghttp2-14_1.59.0-1ubuntu0.4_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/n/nginx/nginx-common_1.24.0-2ubuntu7.18_all.deb",
+   "sha256": "70ccc3eff389c9f0f5edafeb9641f46c0e704f34d1936f80dcbac42c09c67963",
+   "bytes": 45076,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/n/nginx/nginx-common_1.24.0-2ubuntu7.18_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/n/nginx/nginx_1.24.0-2ubuntu7.18_amd64.deb",
+   "sha256": "6a169148442f2180cd9676f92e033ec8411d3a82d39c5613d380aaab06226f5b",
+   "bytes": 524616,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/n/nginx/nginx_1.24.0-2ubuntu7.18_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/o/openldap/libldap2_2.6.10%2bdfsg-0ubuntu0.24.04.1_amd64.deb",
+   "sha256": "7f3f8e565401256f21d5aa562c9f92dbb63537b73aaea6283e4db5264f1598f4",
+   "bytes": 197620,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/libldap2_2.6.10%2bdfsg-0ubuntu0.24.04.1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.13-0ubuntu3.16_amd64.deb",
+   "sha256": "675b84971ffd4467707008c25ef7520f90ea7c23ef27b7a76b0dccf1d7c4dc3f",
+   "bytes": 1003702,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.13-0ubuntu3.16_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/patch/patch_2.7.6-7build3_amd64.deb",
+   "sha256": "fb7d78ed25c2788a607802270f3c28ac5ed6857bfb6cce9f73ad2cafac9159b3",
+   "bytes": 104048,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/patch/patch_2.7.6-7build3_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/pinentry/pinentry-curses_1.2.1-3ubuntu5_amd64.deb",
+   "sha256": "d3df9109d1e8e4ca05630f3a6fb7d2231f71d97fc4205d0681e1c421cc77ce41",
+   "bytes": 35244,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/pinentry/pinentry-curses_1.2.1-3ubuntu5_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/popt/libpopt0_1.19%2bdfsg-1build1_amd64.deb",
+   "sha256": "b3e7ea5192e57c847b77c527d51f5b8d4bce47988d2ba326a5c3193f6d173ded",
+   "bytes": 28562,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/popt/libpopt0_1.19%2bdfsg-1build1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/pyopenssl/python3-openssl_23.2.0-1ubuntu0.1_all.deb",
+   "sha256": "17ca62abb695637116b501875c4d7ef3a6a964113663797357a57df90be043eb",
+   "bytes": 48120,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/pyopenssl/python3-openssl_23.2.0-1ubuntu0.1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/pyparsing/python3-pyparsing_3.1.1-1_all.deb",
+   "sha256": "ec2395b1fe34a7a828f5cfabc4262217f6a86fb6ecb993fc18fbad3fc9edabba",
+   "bytes": 86192,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/pyparsing/python3-pyparsing_3.1.1-1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/python-apt/python-apt-common_2.7.7ubuntu5.3_all.deb",
+   "sha256": "ee46d9a2cfb887c4e3b017137711c84d7a336e388e55c6af1870ad93d57eb373",
+   "bytes": 20456,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/python-apt/python-apt-common_2.7.7ubuntu5.3_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/python-apt/python3-apt_2.7.7ubuntu5.3_amd64.deb",
+   "sha256": "f240266ebe34ec2562c277c4257b032a8546b479337fdba1536a8d19804d0eb2",
+   "bytes": 169284,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/python-apt/python3-apt_2.7.7ubuntu5.3_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/python-certifi/python3-certifi_2023.11.17-1_all.deb",
+   "sha256": "1a7ee6751fdc263319f4a2e559e8104f7a1e9af0cdb9926e5a145ebfec0dd148",
+   "bytes": 164904,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/python-certifi/python3-certifi_2023.11.17-1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/python-cffi/python3-cffi-backend_1.16.0-2build1_amd64.deb",
+   "sha256": "a49f5e49b15146f6b2217cb3b6e6d62c503b02a7b271295e6d569d483ccdf687",
+   "bytes": 77292,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/python-cffi/python3-cffi-backend_1.16.0-2build1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/python-cryptography/python3-cryptography_41.0.7-4ubuntu0.4_amd64.deb",
+   "sha256": "8fa33b608a16df054bf26ea3a653b1d512ab745d01e56fa938673ebc8c727060",
+   "bytes": 815068,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/python-cryptography/python3-cryptography_41.0.7-4ubuntu0.4_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/python-debian/python3-debian_0.1.49ubuntu2_all.deb",
+   "sha256": "5c84f0e08bc68517b28d5dd116d985ae9e644759355f9ef97063ab62d4da8a3b",
+   "bytes": 114812,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/python-debian/python3-debian_0.1.49ubuntu2_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/python-distro/python3-distro_1.9.0-1_all.deb",
+   "sha256": "eca0e60a27431b6f5d13067e9c78441d38c19108e4896da6f512adc6193d269a",
+   "bytes": 19012,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/python-distro/python3-distro_1.9.0-1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/python-idna/python3-idna_3.6-2ubuntu0.2_all.deb",
+   "sha256": "9094258aba489349e87bbd3ed561c727c5c19f6b940835a431b4f89bae32c602",
+   "bytes": 49730,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/python-idna/python3-idna_3.6-2ubuntu0.2_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/python-tz/python3-tz_2024.1-2_all.deb",
+   "sha256": "fea61f0993810c2ad36aa46757e1c3f4c1da3cbb8b2b2bb42975f5a4dad9300f",
+   "bytes": 31432,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/python-tz/python3-tz_2024.1-2_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/python-urllib3/python3-urllib3_2.0.7-1ubuntu0.8_all.deb",
+   "sha256": "ea97aaa35a8d55fcdba5a00984bf6ecf35e632e70a9c120e6b195a876c221700",
+   "bytes": 95900,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/python-urllib3/python3-urllib3_2.0.7-1ubuntu0.8_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/libpython3-stdlib_3.12.3-0ubuntu2.1_amd64.deb",
+   "sha256": "57ebb378c59d2f9ef479bee0abc933c560878cc10e2c3af8e05d6fdb2ed63da4",
+   "bytes": 10080,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/libpython3-stdlib_3.12.3-0ubuntu2.1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-minimal_3.12.3-0ubuntu2.1_amd64.deb",
+   "sha256": "9ba5dd55cdcf6121c147dc5cb87403169b5933e3a56da0de57774f2ce819cf06",
+   "bytes": 27442,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-minimal_3.12.3-0ubuntu2.1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3_3.12.3-0ubuntu2.1_amd64.deb",
+   "sha256": "e691b9cc40841c41bbdc50bd794c876cb1b1801306ea27b06e9a1458180df1e9",
+   "bytes": 23004,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3_3.12.3-0ubuntu2.1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/python3.12/libpython3.12-minimal_3.12.3-1ubuntu0.17_amd64.deb",
+   "sha256": "d646ad7112b5adec21ba0e1af015f04ae8ca7f5efdc619622547dd6673c4c14b",
+   "bytes": 838536,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/python3.12/libpython3.12-minimal_3.12.3-1ubuntu0.17_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/python3.12/libpython3.12-stdlib_3.12.3-1ubuntu0.17_amd64.deb",
+   "sha256": "45d3f530ba1f9d6e879ad46b92046fabab13fe50a82450e4f65557a3bbad1489",
+   "bytes": 2070530,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/python3.12/libpython3.12-stdlib_3.12.3-1ubuntu0.17_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/python3.12/python3.12-minimal_3.12.3-1ubuntu0.17_amd64.deb",
+   "sha256": "d452689b9660845345a4c3e05e4ad82c082d5474e04031b7aa47f1a6d5610a6e",
+   "bytes": 2334634,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/python3.12/python3.12-minimal_3.12.3-1ubuntu0.17_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/python3.12/python3.12_3.12.3-1ubuntu0.17_amd64.deb",
+   "sha256": "6745c9463432e619d7402b117ad4ac86c31dcd3999ba20daa9e395f6f9909d86",
+   "bytes": 650732,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/python3.12/python3.12_3.12.3-1ubuntu0.17_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/p/pyyaml/python3-yaml_6.0.1-2build2_amd64.deb",
+   "sha256": "315e59500af855f23ee4e95525b99009bd798c4d2658af8eb4b2d66a8a91ec23",
+   "bytes": 122568,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/p/pyyaml/python3-yaml_6.0.1-2build2_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/r/readline/libreadline8t64_8.2-4build1_amd64.deb",
+   "sha256": "563977a16df03b611f5239cc1e9a0426e86479fcc616b5c9e200ea32063119e5",
+   "bytes": 152856,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/r/readline/libreadline8t64_8.2-4build1_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/r/readline/readline-common_8.2-4build1_all.deb",
+   "sha256": "879bfd7f8a9bc4c0f7cdc777cdd8bc6de5f8c4a2ac80c060322a1b22f13504bb",
+   "bytes": 56484,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline-common_8.2-4build1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/r/requests/python3-requests_2.31.0%2bdfsg-1ubuntu1.2_all.deb",
+   "sha256": "ee4785403eecf620f91cc0724b3017a5893f474f3dd3a521a13e15ef33ab5669",
+   "bytes": 50798,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/r/requests/python3-requests_2.31.0%2bdfsg-1ubuntu1.2_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/r/rtmpdump/librtmp1_2.4%2b20151223.gitfa8646d.1-2build7_amd64.deb",
+   "sha256": "967a39dbc14236d1580ede01d80fd78444668572e716734e1ac66c175052594e",
+   "bytes": 56342,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/r/rtmpdump/librtmp1_2.4%2b20151223.gitfa8646d.1-2build7_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/s/setuptools/python3-pkg-resources_68.1.2-2ubuntu1.2_all.deb",
+   "sha256": "13caaa69d5ba8b02e90087d4bcef714c0581e591e820804d15d12f582055147a",
+   "bytes": 167914,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/s/setuptools/python3-pkg-resources_68.1.2-2ubuntu1.2_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/libsqlite3-0_3.45.1-1ubuntu2.8_amd64.deb",
+   "sha256": "b1190bb72359f5fcc47406aa46065eaf4f1ca208085c51224a52b04bedc0b4bb",
+   "bytes": 701602,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/libsqlite3-0_3.45.1-1ubuntu2.8_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.9.15p5-3ubuntu5.24.04.4_amd64.deb",
+   "sha256": "deaf622cdfa623d3efca7b797e38ceae461769b2ec427e8ecd8e6c0fcb745f3c",
+   "bytes": 948984,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.9.15p5-3ubuntu5.24.04.4_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/s/systemd/libsystemd-shared_255.4-1ubuntu8.18_amd64.deb",
+   "sha256": "20210e06618cfc824b19ebc0e2163d72cd57509d947fa71aad8d53d78b808caa",
+   "bytes": 2077180,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/libsystemd-shared_255.4-1ubuntu8.18_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/s/systemd/libsystemd0_255.4-1ubuntu8.18_amd64.deb",
+   "sha256": "2da3fa28302cf007075e89cdc3aabe6973916afcd62c3884b86f67b77c73a5b4",
+   "bytes": 436342,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/libsystemd0_255.4-1ubuntu8.18_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/s/systemd/libudev1_255.4-1ubuntu8.18_amd64.deb",
+   "sha256": "6de7321adcc37068f8702fe6826473662df73c36377e00f07f7acfeca2e40d4a",
+   "bytes": 177836,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/libudev1_255.4-1ubuntu8.18_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd-dev_255.4-1ubuntu8.18_all.deb",
+   "sha256": "08a19c4b503e54945510fac8db363782095b7cd68f017ffc60e758f24d4c82d3",
+   "bytes": 107102,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd-dev_255.4-1ubuntu8.18_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_255.4-1ubuntu8.18_amd64.deb",
+   "sha256": "ba37e7dc1e33690d94a1063543d27f9b17c013a20791c3315b2423fbf9e7ae7b",
+   "bytes": 3474856,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_255.4-1ubuntu8.18_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2026e-0ubuntu0.24.04.1_all.deb",
+   "sha256": "2f6794a7f31753fc947d9ac02ff03ea46510f34864f9d132a93d7b105e3c4447",
+   "bytes": 282136,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2026e-0ubuntu0.24.04.1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-advantage-tools/ubuntu-pro-client_38ubuntu0%7e24.04_amd64.deb",
+   "sha256": "ca79c208feedf4e49ec7165a4a36f9a648b77b0e5d7f443c728c1478ef45f84d",
+   "bytes": 259430,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-advantage-tools/ubuntu-pro-client_38ubuntu0%7e24.04_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-release-upgrader/python3-distupgrade_24.04.29_all.deb",
+   "sha256": "dc26117e19c9ae8ce4b3152054381e8c9f25f2d0747a8db13092cf9c26619eb5",
+   "bytes": 124666,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-release-upgrader/python3-distupgrade_24.04.29_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-release-upgrader/ubuntu-release-upgrader-core_24.04.29_all.deb",
+   "sha256": "be3e4274cff3ecd4941b7cb6cd8b90865dcedded21dcf053298e2016629be3b5",
+   "bytes": 27188,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-release-upgrader/ubuntu-release-upgrader-core_24.04.29_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/u/update-manager/python3-update-manager_24.04.12_all.deb",
+   "sha256": "55ee1fa2ac721e940a6e4f2e638b56a5364c0fc5525e661e0a5ceb758f1150d1",
+   "bytes": 43442,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/u/update-manager/python3-update-manager_24.04.12_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/u/update-manager/update-manager-core_24.04.12_all.deb",
+   "sha256": "7fdfc6d1ae8d81982b5982f70e4f27ccf08c3e4d60fbde8f228fe53db6f943d0",
+   "bytes": 11592,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/u/update-manager/update-manager-core_24.04.12_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/u/update-notifier/update-notifier-common_3.192.68.2_all.deb",
+   "sha256": "50c3303b52aaaaadcf11750e1a0afc905bdee0d6f75aa2f1febdd4416afe7fec",
+   "bytes": 206730,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/u/update-notifier/update-notifier-common_3.192.68.2_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/u/util-linux/libfdisk1_2.39.3-9ubuntu6.6_amd64.deb",
+   "sha256": "7f67b127d239f51218c1eb63c3b0c219bbf26f450349bed9ad5d9f10a6b80c1b",
+   "bytes": 146344,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/libfdisk1_2.39.3-9ubuntu6.6_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/v/vim/xxd_9.1.0016-1ubuntu7.20_amd64.deb",
+   "sha256": "abe2a776ec6472e6b9b0a8497d3c2e8007f9863092dfd1448f4a68d0c25af750",
+   "bytes": 66190,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/v/vim/xxd_9.1.0016-1ubuntu7.20_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.21.4-1ubuntu4.5_amd64.deb",
+   "sha256": "2aa5a734b21b49ff6bd2239546b3f88275f8abb55dd8a984249e6cd0c1173a92",
+   "bytes": 334118,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.21.4-1ubuntu4.5_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/x/xfonts-encodings/xfonts-encodings_1.0.5-0ubuntu2_all.deb",
+   "sha256": "3bac5ff1cba3b001aee1652e3af45d200c415b68e9b27932cb51fe9c464feb40",
+   "bytes": 578092,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/x/xfonts-encodings/xfonts-encodings_1.0.5-0ubuntu2_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/x/xfonts-utils/xfonts-utils_7.7%2b6build3_amd64.deb",
+   "sha256": "8da5fccbc50005d50dd69ef558ae72673435026e1d3134d0c1cc836d22953c44",
+   "bytes": 94438,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/x/xfonts-utils/xfonts-utils_7.7%2b6build3_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/x/xorg/x11-common_7.7%2b23ubuntu3_all.deb",
+   "sha256": "b545fa5196dd7467ba3770d6ce575abcd7941071961ea9f7535a319d9d20fd46",
+   "bytes": 21748,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/x/xorg/x11-common_7.7%2b23ubuntu3_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/liblzma5_5.6.1%2breally5.4.5-1ubuntu0.4_amd64.deb",
+   "sha256": "5bcf5da2339331e21d3f42a831e82c61c54c6b2f29804010e8d59abd0ae52167",
+   "bytes": 127704,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/liblzma5_5.6.1%2breally5.4.5-1ubuntu0.4_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib1g_1.3.dfsg-3.1ubuntu2.3_amd64.deb",
+   "sha256": "376249c8de139568221dbb242318cc8cb8f02299e3a62b7432948e1754fbddf9",
+   "bytes": 63158,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib1g_1.3.dfsg-3.1ubuntu2.3_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/multiverse/m/msttcorefonts/ttf-mscorefonts-installer_3.8.1ubuntu1_all.deb",
+   "sha256": "b6b140cd325f9b89de47b3d626bfe67b372b6181b660d2c1a69e9b539fab322c",
+   "bytes": 25606,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/multiverse/m/msttcorefonts/ttf-mscorefonts-installer_3.8.1ubuntu1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/universe/c/cabextract/cabextract_1.11-2_amd64.deb",
+   "sha256": "69dc460096e894154eb3746baa65e8bcb1e09dc360d5f33288525abdad9ca5c2",
+   "bytes": 24708,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/universe/c/cabextract/cabextract_1.11-2_amd64.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/universe/p/parsedatetime/python3-parsedatetime_2.6-3_all.deb",
+   "sha256": "63f4a25fadbb1ac071b37f34a76fee26f99670031029d5ec60d110351d2a399d",
+   "bytes": 32768,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/universe/p/parsedatetime/python3-parsedatetime_2.6-3_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/universe/p/pyrfc3339/python3-rfc3339_1.1-4_all.deb",
+   "sha256": "ad6d9f0368318971db55457f1774c074cb1bedcf7ba039a335218aee93acfa35",
+   "bytes": 6744,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/universe/p/pyrfc3339/python3-rfc3339_1.1-4_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/universe/p/python-acme/python3-acme_2.9.0-1_all.deb",
+   "sha256": "206abf6d69b0c1e64e8ed47173ca651a3727135fbd557bc0cf350e8527599fb2",
+   "bytes": 48532,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/universe/p/python-acme/python3-acme_2.9.0-1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/universe/p/python-certbot-nginx/python3-certbot-nginx_2.9.0-1_all.deb",
+   "sha256": "a8f7e5ad83aa1b45769165bf6f1627d6fdf897b627b5c8b757f9d402a310b219",
+   "bytes": 65956,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/universe/p/python-certbot-nginx/python3-certbot-nginx_2.9.0-1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/universe/p/python-certbot/certbot_2.9.0-1_all.deb",
+   "sha256": "f7c005d59b1fecf0d99f5116c1d6f600d3f9d7a099bc65860f0829b56065fda9",
+   "bytes": 89168,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/universe/p/python-certbot/certbot_2.9.0-1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/universe/p/python-certbot/python3-certbot_2.9.0-1_all.deb",
+   "sha256": "2e1a629d26872a55bdacf356d1841e1406da41fcd67aa22429ecf54c560bb56a",
+   "bytes": 266610,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/universe/p/python-certbot/python3-certbot_2.9.0-1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/universe/p/python-configargparse/python3-configargparse_1.7-1_all.deb",
+   "sha256": "267d406c5f5e10c55d00e05bdc7214184463f2a7a678445c54f7230c343d6b51",
+   "bytes": 31654,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/universe/p/python-configargparse/python3-configargparse_1.7-1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/universe/p/python-josepy/python3-josepy_1.14.0-1_all.deb",
+   "sha256": "ec89831879b6c7edb2635b58abfc0af267eeb4ebdec7bda5431572392b14bb94",
+   "bytes": 22062,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/universe/p/python-josepy/python3-josepy_1.14.0-1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/archive.ubuntu.com/ubuntu/pool/universe/s/supervisor/supervisor_4.2.5-1ubuntu0.1_all.deb",
+   "sha256": "d6d9c70d73da4e5ad2e3a2355e96827545a4edf054de548164b0689c3b5f1f01",
+   "bytes": 285622,
+   "url": "http://archive.ubuntu.com/ubuntu/pool/universe/s/supervisor/supervisor_4.2.5-1ubuntu0.1_all.deb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/security.ubuntu.com/ubuntu/dists/noble-security/InRelease",
+   "sha256": "e56daa3c9903f06da8161b4f0e61a747aab215647f4bfabbecd5655631200f09",
+   "bytes": 126127,
+   "url": "http://security.ubuntu.com/ubuntu/dists/noble-security/InRelease"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/security.ubuntu.com/ubuntu/dists/noble-security/main/binary-amd64/by-hash/SHA256/db3c4b145df3fb6b1187661af732d6c2f6b42cc09aa8218d83c96127940da045",
+   "sha256": "db3c4b145df3fb6b1187661af732d6c2f6b42cc09aa8218d83c96127940da045",
+   "bytes": 1411082,
+   "url": "http://security.ubuntu.com/ubuntu/dists/noble-security/main/binary-amd64/by-hash/SHA256/db3c4b145df3fb6b1187661af732d6c2f6b42cc09aa8218d83c96127940da045"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/security.ubuntu.com/ubuntu/dists/noble-security/multiverse/binary-amd64/by-hash/SHA256/50c91ece48e4857940d508af311a5c270beec339828282853ce3412952e7d797",
+   "sha256": "50c91ece48e4857940d508af311a5c270beec339828282853ce3412952e7d797",
+   "bytes": 55566,
+   "url": "http://security.ubuntu.com/ubuntu/dists/noble-security/multiverse/binary-amd64/by-hash/SHA256/50c91ece48e4857940d508af311a5c270beec339828282853ce3412952e7d797"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/security.ubuntu.com/ubuntu/dists/noble-security/restricted/binary-amd64/by-hash/SHA256/8e49ee44f4dcedc669842582e6bda3dcaa1d3f2d1040ef912381c7f78859e4bb",
+   "sha256": "8e49ee44f4dcedc669842582e6bda3dcaa1d3f2d1040ef912381c7f78859e4bb",
+   "bytes": 2122047,
+   "url": "http://security.ubuntu.com/ubuntu/dists/noble-security/restricted/binary-amd64/by-hash/SHA256/8e49ee44f4dcedc669842582e6bda3dcaa1d3f2d1040ef912381c7f78859e4bb"
+  },
+  {
+   "path": "mirror/apt/20261024T000000Z/http/security.ubuntu.com/ubuntu/dists/noble-security/universe/binary-amd64/by-hash/SHA256/aed5ed40df098e74bbb6dd7b882e271dba1bd1acc7af0e08134e98dec39d5a21",
+   "sha256": "aed5ed40df098e74bbb6dd7b882e271dba1bd1acc7af0e08134e98dec39d5a21",
+   "bytes": 1549185,
+   "url": "http://security.ubuntu.com/ubuntu/dists/noble-security/universe/binary-amd64/by-hash/SHA256/aed5ed40df098e74bbb6dd7b882e271dba1bd1acc7af0e08134e98dec39d5a21"
+  }
+ ],
+ "trees": [
+  {
+   "path": "mirror/trees/v8_89-synced.tar.zst",
+   "sha256": "dcbb246d02ecf07dc880cc9fc6026e00185a5681abefa743d842d05b1118fb6e",
+   "bytes": 9417239962
+  }
+ ],
+ "caches": [
+  {
+   "path": "mirror/caches/csp4/cache",
+   "mounted_as": "/root/.cache",
+   "tree_sha256": "e9527826d9f2eee88d4fd9a0d282c74c0fc39ae559400261f44276d7a379da3b",
+   "files": 7649,
+   "bytes": 538595236
+  },
+  {
+   "path": "mirror/caches/csp4/npm",
+   "mounted_as": "/root/.npm",
+   "tree_sha256": "3433836395e9d45af15464be36cd9afd028474f3deef781559166d33dafad0aa",
+   "files": 18028,
+   "bytes": 546140284
+  },
+  {
+   "path": "mirror/caches/csp4/pkg-cache",
+   "mounted_as": "/root/.pkg-cache",
+   "tree_sha256": "235b513d22b5510d505ecdaef7196e36369bc4ce596417cfeb32ceee06394009",
+   "files": 4,
+   "bytes": 257609144
+  }
+ ],
+ "patches": [
+  {
+   "path": "env/csp/patches/web-apps-0001-csp-drop-onload-media.patch",
+   "sha256": "a4bae56da24a4fee5112b3658aaaf265ea58d91a789cd056fe2c3e60a7213508",
+   "bytes": 14632,
+   "repository": "https://github.com/ONLYOFFICE/web-apps.git",
+   "base_commit": "493e500c56ec96ccaa0452ab092cbce23b6dcc2e"
+  },
+  {
+   "path": "env/csp/patches/web-apps-0002-build-docformats-sprite-before-common-copy.patch",
+   "sha256": "2c406c8c5f2b6dfa57da6765a450e1203d59ef64fdd8be13edd592c2b993707b",
+   "bytes": 1524,
+   "repository": "https://github.com/ONLYOFFICE/web-apps.git",
+   "base_commit": "493e500c56ec96ccaa0452ab092cbce23b6dcc2e"
+  },
+  {
+   "path": "env/csp4/patches/build_tools-0001-pkg-target-node22.patch",
+   "sha256": "0cf6b0c439d7e11d891ea8b4984f9866137d6f2031551c113346937411b9176a",
+   "bytes": 547,
+   "repository": "https://github.com/ONLYOFFICE/build_tools.git",
+   "base_commit": "8cccb383182f45f5171a7c6d62f49ebf37aab400"
+  },
+  {
+   "path": "env/christien/patches/document-server-package-0001-christien-license-copy.patch",
+   "sha256": "bc9b0dc86c9a419db859790cf4a1e94f47b7583eb731e10bdd64c9381e5dec7e",
+   "bytes": 59829,
+   "repository": "https://github.com/ONLYOFFICE/document-server-package.git",
+   "base_commit": "8dc6a813f636d72821be21661d8dd151bf674aa8"
+  },
+  {
+   "path": "env/csp4/patches-image/Docker-DocumentServer-0001-offline-classic-builder-full-upgrade.patch",
+   "sha256": "9c27cd950a1946f7fa964dee106aad6ea179396ad256ead5bcdfb44cf60a21f4",
+   "bytes": 2358,
+   "repository": "https://github.com/ONLYOFFICE/Docker-DocumentServer.git",
+   "base_commit": "839b73b568db94d117fdeaf3374f55f78ee9b1db"
+  }
+ ],
+ "build_scripts": [
+  {
+   "path": "env/csp4/csp4-harden.sh",
+   "sha256": "8bc3ead93e5c65cdff3ecbff52d5ea86c4cb72550d4354ba6b0b2bf188d1027d",
+   "bytes": 2759
+  },
+  {
+   "path": "env/csp4/csp4-offline.sh",
+   "sha256": "71eb58098fde5a821a4d766712b8ade3e017610530006aa443766bb496853e39",
+   "bytes": 8967
+  },
+  {
+   "path": "env/csp4/csp4-online.sh",
+   "sha256": "d496e21d329c257d3305f89e0fcf77cf442100c6649d5d6151c9096253886454",
+   "bytes": 4097
+  },
+  {
+   "path": "env/csp4/csp4-package.sh",
+   "sha256": "c13f0e3a44e3d5300128e0b9b2ce60e604e8322f4251265115093f69060afb65",
+   "bytes": 4619
+  },
+  {
+   "path": "env/csp4/image-hashes.sh",
+   "sha256": "b23761e62aec95a0154051c2f92cee28edf39629a0ea67080174a0e65f80a2c2",
+   "bytes": 683
+  },
+  {
+   "path": "env/csp4/make_manifest.py",
+   "sha256": "9d78d16b694b5a8a810f7d266f9c4b32d0bd45ff890f88e62a2e7d9a0ba09adc",
+   "bytes": 9655
+  },
+  {
+   "path": "env/csp4/online-steps.sh",
+   "sha256": "533025725d42a27355ec71b5246b49e928e431cc5290344b0b73fa31534249fe",
+   "bytes": 1810
+  },
+  {
+   "path": "env/csp4/harden/code.js",
+   "sha256": "39f525d3e97ee80cfdc4fc9da5099db151f365c184aee14413a253812f599aad",
+   "bytes": 3843
+  },
+  {
+   "path": "env/csp4/harden/csp-shim.js",
+   "sha256": "b713a18a7e109222019725d9ef36dc560bb3b8576d92b48adae4978bf8e0de82",
+   "bytes": 9314
+  },
+  {
+   "path": "env/csp4/harden/harden.sh",
+   "sha256": "9e9edc4678b96e952eeb0fbcd2f1fd4fea54ba016966a3c6d2c01c9aaca21e8f",
+   "bytes": 1136
+  },
+  {
+   "path": "env/csp4/harden/misses.js",
+   "sha256": "14c42ea4e51184632b6f0ee03bcd38c2a2acb06d571722291a551fd7f92b0230",
+   "bytes": 2124
+  },
+  {
+   "path": "env/csp4/harden/pages.js",
+   "sha256": "c74b87df0afb8d2ebfb7f1b8c92849937efab4fdabe65e6b1f083ea105408314",
+   "bytes": 2828
+  },
+  {
+   "path": "env/csp4/harden/sdkjs.js",
+   "sha256": "0d0ed8777d6a03012bbb18afa8333d6ba036137a32bd5e0a7b40c97398c0d3c6",
+   "bytes": 1801
+  },
+  {
+   "path": "env/csp4/harden/templates-recorded.json",
+   "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+   "bytes": 3
+  },
+  {
+   "path": "env/csp4/harden/templates.js",
+   "sha256": "daeaec29a92c7045e185e84e9461220cc92762d137733134fb27dd58c42b0d44",
+   "bytes": 13887
+  },
+  {
+   "path": "env/csp4/toolchain/Dockerfile",
+   "sha256": "6d95155f7ff60e523f23f9a2815a8df296b0a836e74e06418560541aaaa35fd5",
+   "bytes": 1497
+  },
+  {
+   "path": "env/minify/minify.js",
+   "sha256": "c4915126639679b813f3e2f0861d3d540301837a284d83aacabfb714cebbbda1",
+   "bytes": 2885
+  },
+  {
+   "path": "env/christien/prune.txt",
+   "sha256": "d9ab98c7b11e8347c3b566b78852e56c8cdc8b62b29a5c1a3b8450c1815321ef",
+   "bytes": 772
+  },
+  {
+   "path": "env/make-cap.sh",
+   "sha256": "844e346473f8b4abecf38ece59d512a23dc4b71ed0ba5e8cacc675e058f1ef2d",
+   "bytes": 567
+  },
+  {
+   "path": "env/phase2/mirror_server.py",
+   "sha256": "62168e9881edb282d9c2b0c359f150f3b9e7ebc8aac853646b7f6df46b390a45",
+   "bytes": 7018
+  },
+  {
+   "path": "env/phase2/mirror-hosts.txt",
+   "sha256": "0314afb3f413ead38efac084f4a71a28280072877a55219a0792b36dc5d6b40e",
+   "bytes": 452
+  },
+  {
+   "path": "env/phase2/offline-seed-v8.sh",
+   "sha256": "37d5ec976862a7fce3e34d18333ba7972d4f7c82ea0b41d4fe5fb982dda39455",
+   "bytes": 409
+  },
+  {
+   "path": "env/phase2/git-inventory.sh",
+   "sha256": "3ef4e4c5af4715aed17b3cbd04f9c80d262561dda723ac9e07184ec8853a5e97",
+   "bytes": 787
+  }
+ ]
+}
